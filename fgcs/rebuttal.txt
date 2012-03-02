@@ -1,0 +1,44 @@
+Firstly, we'd like to thank both reviewers for their insightful comments!
+
+Reviewer 1
+
+When we designed the base ontology, we made careful decisions to only include general concepts in it. 
+
+Domain-specific concepts (e.g., those specific to phenomics) are defined in lower-level ontologies that can be incorporated through links from the base ontology. 
+
+For example, in the base ontology, we only include generic concepts such as Project, Publication, Investigation, Measurement, Analysis, and so on. Concepts specific to phenomics, such as Genotype, Gene, Sequence, Phenotype, 
+are all defined in a separate ontology. This layering/linking of ontologies is discussed in detail in Section 4 with the phenomics ontology as a case study. 
+
+The purpose of this architecture is to enable different domains to reuse concepts from the base ontology and extend it with their own vocabularies. Hence, it is the design goal that the system can easily be applied to other domains by developing and plugging in a new domain-specific ontology – little/no redevelopment work will be required to adapt the system to a new domain.
+
+Both reviewers commented on the relevance of Section 5. We think it is very relevant to the architecture and in this revision we have made that connection more obvious. We have also created a new Section 3.3 that discusses the ontology-centric operations: versioning, reasoning and dynamic composition. These operations are central to making the architecture extensible. Their formal definitions and semantics are provided in Section 5. 
+
+Domain independence and extensibility are two orthogonal axes of the proposed architecture here. However, they both rely on hierarchical/linked ontologies (Section 4) and ontology-centric operations (Section 3.3 and 5). Domain independence stems from the fact that new ontologies can be easily defined or existing ontologies integrated - by extending the base ontology. Extensibility stems from the fact that concept/object ontologies can be versioned, dynamically composed and reasoned about. Hence, we feel that Section 5 is an integral part of the architecture and deserves a detailed treatment.
+
+
+Reviewer 2
+
+(1) We added a new subsection, Sec. 4.4, to discuss ways to address the need for both local ontologies and external vocabularies.
+
+(2) Thank you for pointing this out. We have rephrased relevant parts of the paper to provide greater emphasis on our architecture.
+
+(3) We rephrased the discussion of FuGe on p. 6. 
+
+(4) A new subsection, Section 3.3, has been created to discuss the essential operations: versioning, ontology reasoning and dynamic composition. The original Figure 6 has been moved to this new section as it is a better place to explain these concepts.
+
+The base ontology is described separately, in Section 4. 
+
+(5) More descriptions of the CCLRC Scientific Metadata Model have been added to Section 2.2. Its focus and main drawbacks are also discussed.
+
+ISO 19156 has been described at the end of Section 2.2. 
+
+The Observation class has been added to the original Figure 2 (now Figure 3). It was a mistake omitting it. Thank you for picking this up! The missing Protocol class has also been added. 
+
+(6) In the Conclusion section, we added 3 paragraphs discussing how Linked Data datasets can be integrated in our ontology-centric architecture as sources of annotation on domain concepts and objects.
+
+(7) We emphasized the significance of Section 5 by linking the new Section 3.3 to Section 5. Section 5 provides the semantic foundations for the operations defined in Section 3.3 - that make the overall architecture extensible and domain-independent. We feel that the semantics are important as they establish the foundation of the work described here. The relevance of Section 5 is also discussed above in response to reviewer 1's comments.
+
+We also clarified the definition of locality in Section 5.3.
+
+All typos have also been corrected. Thank you!
+

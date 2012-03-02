@@ -1,0 +1,19 @@
+List of changes:
+
+* Added a new Section 3.3 to discuss the 3 important operations in the "business logic layer" of the proposed architecture: versioning, ontology reasoning and dynamic composition. 
+
+* Added a new Section 4.4 to discuss the roles of local ontologies and external ontologies.
+
+* Swapped the order of Sections 4.2 and 4.3 to improve the flow of the paper.
+
+* Made the relevance of Section 5 more obvious by providing context for it in other parts of the paper (Sections 3 & 4). 
+
+* Added/improved discussions on the ISO 19156 proposed standard, the FuGe model & the CCLCR Metadata Model. 
+
+* Added the Conclusion section, added 3 paragraphs discussing approaches to integrate Linked Data datasets into the proposed architecture.
+
+* Updated Section 4 to make the connections of base ontology and domain-specific ontologies clearer.
+
+* Updated Section 6 to reflect on the deployment progress. The URL of a production instance of the architecture is given. 
+
+* Typo corrections & other minor changes.

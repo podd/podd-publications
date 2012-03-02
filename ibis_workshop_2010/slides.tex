@@ -1,0 +1,595 @@
+\documentclass[ignorenonframetext,compress]{beamer}
+
+\mode<presentation>
+
+\usepackage{times}
+\usefonttheme{structurebold}
+
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{zed-csp}
+\usepackage{subfigure}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{color}
+
+\renewcommand*{\thesubfigure}{}
+
+\usetheme{Madrid}
+
+\title[PODD -- Ontology-driven Repository]{PODD: An Ontology-driven Data Repository for Collaborative Phenomics Research}
+
+\author[Yuan-Fang Li]{
+    \textbf{Yuan-Fang Li}\\
+    \url{liyf@itee.uq.edu.au}
+    }
+
+\institute[UQ]{
+    The eResearch Lab, School of ITEE\\The University of Queensland\\
+    }
+\vspace{+80pt}
+\date[IBS Workshop 2010]{\footnotesize IBS Phenomics Data and Informatics Workshop - Canberra 2010}
+
+\AtBeginSection[]{\frame{\frametitle{Outline}\tableofcontents[current]}}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\part{Main Part}
+
+\section{Introduction}
+\begin{frame}{Motivation}
+\begin{block}{Challenges in phenomics research data management}
+    \begin{itemize}
+        \item Data is huge
+        \begin{itemize}
+            \item APN: estimated 1.8TB + 30\% growth/year
+            \item TPA: 0.5TB/week $\sim 25$ TB/year
+        \end{itemize}
+        \pause
+        \item New platforms/processes/technologies emerge
+        \pause
+        \item Data needs \textbf{\emph{context}}
+        \begin{itemize}
+            \item Scientific, administrative \& other metadata
+        \end{itemize}
+    \end{itemize}
+\end{block}
+\pause
+\begin{block}{Repositories for the management of data}
+    \begin{itemize}
+      \item Not all questions answered
+    \end{itemize}
+\end{block}
+\end{frame}
+
+There are 3 major challenges to data management in phenomics research.
+
+1. The volume of data. Phenomics research generates large amounts of
+data. For example, APN, the Australian Phenomics Network, is
+estimated to generate 1.8TB of data in the first year with 30\%
+growth. That is more than 7TB over 3 years. And APN is only one
+research center. We still have APPF, which operates 2 centers. The
+large volume makes the storage and distribution much more difficult.
+
+2. Phenomics is a new area. As a result, new imaging platforms,
+technologies and processes emerge all the time. A data repository
+needs to be constructed in such a way that it can cater for future
+platforms and technologies.
+
+3. Data needs context. 7TB of data isn't very useful if it just sits
+there and collects dust. To make use of the data, we need to
+surround them with context, the metadata, that describe the raw data
+in a meaningful way. Metadata can have dimensions, such as
+scientific and administrative. They can help researchers to discover
+data, integrate data and analyze data is a vital part of a data
+repository.
+
+There are quite a few databases for genomics and protein research,
+such as Emsembl and UniProt. Unfortunately, not all the requirements
+for phenomics data management are met. For example, genomic data is
+relatively well defined, which isn't the case for phenomics.
+Phenomics data may come off from a variety of imaging and measuring
+platforms and the appropriate metadata needs to be captured.
+
+The above challenges motivated us to develop the PODD repository.
+
+\begin{frame}{Clients \& Collaborators}
+\begin{block}{Australian Integrated Biological Science Facilities}
+    \begin{itemize}
+        \item<2-> Australian Plant Phenomics Facility (APPF)
+            \begin{itemize}
+                \item High-throughput (TPA) \& high-resolution (HRPPC) centers
+            \end{itemize}
+        \item<3-> Australian Phenomics Network (APN)
+            \begin{itemize}
+                \item Mouse models, \emph{deep} imaging and measuring platforms
+            \end{itemize}
+        \item<4-> Atlas of Living Australia (ALA)
+            \begin{itemize}
+                \item Biodiversity data collection \& management
+            \end{itemize}
+    \end{itemize}
+\end{block}
+~\\
+\begin{figure}[ht]
+\centering
+\onslide<2->\subfigure[]{
+\includegraphics[width=20mm]{conveyor.png}
+}
+\onslide<2->\subfigure[]{
+\includegraphics[width=20mm]{sample.png}
+}
+\onslide<3->\subfigure[]{
+\includegraphics[width=20mm]{mouse.png}
+}
+\onslide<4->\subfigure[]{
+\includegraphics[width=20mm]{organism.png}
+}
+\end{figure}
+\end{frame}
+
+The PODD repository is designed to be used by a number of Australian
+research organizations and projects.
+
+Australian Plant Phenomics Facility has two research centers.
+
+The Plant Accelerator (TPA) at the University of Adelaide is a
+high-throughput plant research center. What you see here is a
+conveyor belt system. RFID-tagged plants travel in the system and
+their images are automatically taken by the imaging stations.
+
+The High Resolution Plant Phenomics Center, the HRPPC, is located
+here in Canberra. The center focuses on deep phenotyping of plants
+using a number of equipments. Some of them operate on single plants
+in controlled environments, others operate on fields.
+
+The Australian Phenomics Network (APN) is a collaborative research
+facility established to provides mouse models for human and animal
+diseases. For example, APN uses digital slide scanner to perform
+histopathology and organ pathology imaging and analysis.
+
+The Atlas of Living Australia is developing a biodiversity data
+management system for Australia. Collaboration with ALA is also one
+of PODD's goals.
+
+\begin{frame}{Data Management Requirements}
+\begin{overprint}
+\onslide<1>
+\begin{block}{Data capturing}
+\begin{tabularx}{\linewidth}{p{35mm}X}
+Flow Cytometry & FACS data \\
+Histopathology & Zeiss slide images \\
+Plant imaging & Lemnatec images, Flourogroscan images, 3D imaging \\
+Infrared imaging & FLIR images \\
+Chemical measurements & Chlorophyll content, Stomatal conductance \\
+Visual observation & Manual reports\\
+$\cdots$ & $\cdots$
+\end{tabularx}
+\end{block}
+
+\onslide<2>
+\begin{block}{Data generation}
+\begin{tabularx}{\linewidth}{p{30mm}X}
+Project & Project proposal, project plan \\
+Investigation & Objectives, design \\
+Materials & Lines/genotypes, samples, growth conditions \\
+Devices & Specs, settings, versions \\
+Processes & Workflows, protocols, variations \\
+Measurements & Data, images \\
+Analysis & Observations, results \\
+$\cdots$ & $\cdots$
+\end{tabularx}
+\end{block}
+
+\onslide<3>
+\begin{block}{Data management}
+\begin{tabularx}{\linewidth}{p{50mm}l}
+Data distribution & ? \\
+Data sharing & ? \\
+Data publishing & ? \\
+Access control & ? \\
+Archival \& versioning & ? \\
+Structure \& metadata & ? \\
+Data discovery \& analysis & ?
+\end{tabularx}
+\end{block}
+\end{overprint}
+\end{frame}
+
+One of the requirements of PODD is to support data capturing from
+various imaging platforms.
+
+As you can see on this slide. there are quite a number of different
+ways of imaging and observing the subject. The challenge here is,
+besides capturing the raw image files and observations, capture
+sufficient metadata.
+
+Another requirement is data generation. Data and metadata can be
+generated on different levels and at different times. All this
+information needs to be recorded in the repository.
+
+Last but not least, there is a need for the effective management of
+data. Tasks such as distribution, publishing, access control and
+versioning belong to this category. As far as we know, there is no
+data repository that handles these tasks for phenomics research.
+
+\begin{frame}{PODD: an ontology-driven repository}
+\begin{block}{Goals}
+    \begin{itemize}
+        \item Supports data captured by different platforms
+        \item Supports different data formats
+        \item Supports effective data management
+        \begin{itemize}
+            \item Metadata, distribution, access control, discovery, etc.
+        \end{itemize}
+    \end{itemize}
+\end{block}
+\pause
+\begin{block}{Approach}
+    \begin{itemize}
+        \item Define domain ontologies -- focus of this talk
+        \item Design an appropriate architecture
+        \item Develop an ontology-aware repository
+    \end{itemize}
+\end{block}
+\end{frame}
+
+So, the goals of developing the PODD repository is to support the
+above data management tasks for the phenomics community.
+
+After our initial study, we realized that the traditional
+database-driven approach may not be the best way of doing it. We
+will come and revisit this point later.
+
+Ontologies are a formal representation of a particular application
+domain. Besides being a controlled vocabulary that define important
+concepts and relations, an ontology can define complex constraints
+on these concepts and relations, making it a very expressive
+conceptualization of the domain.
+
+Compared to database schemas, ontologies are more open and
+extensible. For these reasons, we choose to develop PODD in an
+ontology-based approach. In this talk I will focus on describing how
+the domain ontology we develop is used in the repository in the
+lifecycles of the management of domain objects.
+
+\begin{frame}{PODD: The High-level Architecture}
+ \vspace{-6mm}
+ \begin{figure}[t]
+  \begin{center}
+  \includegraphics[trim=48mm 20mm 10mm 35mm, clip, width=130mm]{architecture.pdf}
+   \end{center}
+  \label{fig}
+ \end{figure}
+\end{frame}
+
+Here you see the high-level architecture of the PODD repository. On
+the basis are a few components. Fedora Commons is the underlying
+repository that we use to store all the metadata information. iRODS
+is a federated data storage software that can be used by Fedora
+Commons. ANDS provides an iRODS-based service called Data Fabric,
+which we will use in PODD to host the data captured.
+
+Ontologies will be stored in Fedora Commons as well as in a RDF
+triple store to enable data discovery using SPARQL queries and full
+text search on metadata. We also use databases to store information
+about users, access rights and some other things.
+
+The data access layer works with ontologies and objects and is
+responsible for serializing and deserializing objects from the
+underlying storage.
+
+The various services and the web interface is guarded by a security
+layer that controls access based on fine-grained user access rights.
+
+In the following few slides I will quickly introduce a few projects
+related to PODD. I'll also briefly introduce the OWL ontology
+language.
+
+\section{Related Work}
+\begin{frame}{Related Work}
+\begin{block}{FuGe -- Functional Genomics Experiment}
+    \begin{itemize}
+        \item \emph{Material}, \emph{Protocol}, \emph{Data}, etc.
+        \item Can be extended to support phenomics
+        \item[$\cross$] May be difficult to extend for new concepts
+    \end{itemize}
+\end{block}
+\pause
+\begin{block}{OBI -- Ontology for Biomedical Investigations}
+    \begin{itemize}
+        \item \textit{``An integrated ontology for the description of life-science and clinical
+        investigations.''}
+        \item Comprehensive: 2,600+ classes, 10,000+ axioms
+        \item[$\cross$] Complex, computationally ($\mathcal{SHOIN}(D)$)
+    \end{itemize}
+\end{block}
+\end{frame}
+
+FuGe is a UML and database based conceptual model for functional
+genomics experiments. It models important domain concepts such as
+material, protocol and data. The model is stored as database
+schemas, as a result, FuGe may be difficult to extend.
+
+The OBI ontology - ontology for biomedical investigation is a
+comprehensive but complex ontology. It defines domain concepts 
+starting from a very high abstract level. As a result, it is 
+quite big, containing about 26 hundred classes and 10 thousand
+axioms. It is also computationally expensive. For this reason and
+that we need to performing reasoning repeatedly in PODD, we chose
+not to use OBI as our domain ontology. 
+
+\begin{frame}{Related Work}
+\begin{block}{Web Ontology Language (OWL)}
+\begin{itemize}
+    \item Precise, open \& extensible -- exactly what we need!
+    \item Provides core vocabularies for expressing complex ontologies -- \emph{data models}
+    \item Main language constructs
+    \begin{itemize}
+        \item Classes, e.g, \texttt{Human}
+        \item Predicates , e.g., \texttt{hasParent}
+        \item Individuals, e.g., \texttt{Aristotle}
+    \end{itemize}
+    \item APIs, query engines \& automated reasoners available
+\end{itemize}
+\end{block}
+\end{frame}
+
+The Web Ontology Language is the ontology language with a precise semantics 
+and is designed to be open and extensible. For example, OBI is developed
+in OWL. It provides language constructs to define domain concepts and relations
+and axioms on them. 
+
+The three main ingredients in OWL are classes, predicates and individuals. 
+For example, Human can be defined as a class; hasParent can be defined as
+a predicate and Aristotle can be defined as an individual. 
+
+Quite a few open-source APIs, query engines and reasoners are available for OWL. 
+
+\section{The PODD Ontology}
+\begin{frame}{The Ontology Approach}
+\begin{block}{Benefits}
+    \begin{itemize}
+    \setlength{\itemsep}{6pt}
+    \item<1-> Greater extensibility
+        \begin{itemize}
+        \item New concepts/relations can be easily added/modified
+        \end{itemize}
+    \item<2-> Better reuse \& integration
+        \begin{itemize}
+        \item Ontologies are \emph{open}
+        \item Other ontologies can be integrated on multiple levels
+        \end{itemize}
+    \item<3-> Balance between expressivity \& reasoning complexity
+        \begin{itemize}
+        \item Formal semantics enables automated query \& analysis
+        \item Off-the-shelf tools available
+        \end{itemize}
+    \end{itemize}
+\end{block}
+\end{frame}
+
+The ontology-based approach has a number of benefits. 
+
+Firstly, the repository can be more extensible. In PODD we will store all
+object information in ontologies. In such a way new concepts and relations
+can be added more easily than if the information is stored in a database.
+
+An ontology-based repository is also better in terms of reuse and integration.
+Ontologies are designed to be shared so when you make your ontology available,
+you share your model. When you publish your instance data, concrete domain data
+is shared. So integration can happen on multiple levels. 
+
+The OWL language is defined with a formal semantics. This enables automated
+query answering and analysis. OWL is designed with expressivity and reasoning
+complexity in mind so that the core reasoning tasks can be made fully automated. 
+As shown in a previous slide, although OWL is a relatively young language,
+there are off-the-shelf tools available to use.
+
+\begin{frame}{The PODD Ontology}
+\begin{block}{Modeling essentials}
+    \begin{itemize}
+    \item Domain entities
+        \begin{itemize}
+        \item Abstract concepts
+        \item Concrete objects
+        \end{itemize}
+    \item Domain entities defined using OWL \emph{ontologies}
+    \end{itemize}
+\end{block}
+\pause
+\begin{block}{Modeling in OWL}
+    \begin{itemize}
+    \item Domain concepts -- \emph{OWL classes}
+    \item Inter-concept relations -- \emph{OWL predicates} \& \emph{OWL restrictions}
+    \item Concrete domain objects -- \emph{OWL Individuals}
+    \item Comments, descriptions -- \emph{OWL annotations}
+    \end{itemize}
+\end{block}
+\end{frame}
+
+In the same spirit of FuGe and OBI, the PODD ontology defines 
+essential domain concepts so that we can describe concrete domain
+objects. These concepts and objects are defined using OWL ontologies
+and RDF triples.
+
+\begin{frame}{The PODD Ontology -- An Example}
+\begin{example}{The \textbf{\emph{Project}} concept}
+    \begin{itemize}
+    \item The top-level concept
+    \item Constraints on inter-object relations \& attributes -- like everything else
+    \end{itemize}
+    \pause
+    {\small
+    \begin{align*}
+    Project &\sqsubseteq~ =~ 1~ hasProjectPlan \sqcap \forall hasProjectPlan.ProjectPlan\\
+            &\sqsubseteq~ \geq~ 1~ hasInvestigation \sqcap \forall hasInvestigation.Investigation\\
+            &\sqsubseteq~ =~ 1~ hasStartDate \sqcap \forall hasStartDate.date\\
+            &\sqsubseteq~ \leq~ 1~ hasPublicationDate \sqcap \forall hasPublicationDate.date
+    \end{align*}}
+\end{example}
+\begin{block}{}
+    \begin{itemize}
+    \item \textcolor{blue}{\textbf{Extensibility}} from inheritance of OWL classes \& predicates
+    \end{itemize}
+\end{block}
+\end{frame}
+
+In this slide I show a simple, incomplete modeling of the top-level concept
+in our ontology, the Project. In our model of phenomics, everything starts 
+from a research project and all other objects, such as Investigation and
+Material are child or descendant objects. 
+
+As you will see, we define constraints on attributes and inter-concept relations
+of the Project concept. This is how we constrain all of our concepts.
+
+Shown here are 8 constraints. The first line says that any Project instance must
+be mapped to exactly 1 other object by the hasProjectPlan object and this 1 object
+must be of type ProjectPlan.
+
+\begin{frame}{The PODD Ontology}
+\onslide<2->
+\begin{columns}[t]
+\column{.5\textwidth}
+\begin{itemize}
+    \item Inspired by FuGe \& OBI
+    \item Aim: define all \emph{essential} domain concepts, attributes \& relations
+    \item $\sim30$ classes, \\$\sim 80$ predicates, \\$\sim 200$ Axioms
+    \item Faster reasoning, querying, etc.
+\end{itemize}
+\vfill
+\onslide<1->
+\column{.5\textwidth}
+\vspace{-10mm}
+ \begin{figure}[t]
+  \begin{center}
+  \includegraphics[trim=3mm 26mm 2mm 8mm, clip, height=72mm]{hier.pdf}
+   \end{center}
+ \end{figure}
+\end{columns}
+\end{frame}
+
+Here you see a list of important domain concepts in the PODD ontology.
+In the development of our ontology we took inspiration from FuGe and OBI
+but with the aim that the PODD ontology will cover essential domain
+concepts and relations without becoming too complex.
+
+As it currently stands, the ontology defines about 30 OWL classes, 80
+predicates and more than 200 logical axioms. 
+
+With this smaller ontology, all core reasoning tasks can be performed
+much faster.
+
+\begin{frame}{PODD Ontology -- Roles}
+\begin{block}{Ontologies \emph{drives} repository functions}
+\begin{list}{}{}
+\item[\textcolor{blue}{\textbf{Presentation}}] Drives the rendering of the web pages
+    \begin{itemize}
+    \item Object creation, editing, display, etc.
+    \end{itemize}
+\item[\textcolor{blue}{\textbf{Management}}] Object (de)serialization to/from ontologies
+\item[\textcolor{blue}{\textbf{Validation}}] Ontology reasoning performed
+    \begin{itemize}
+    \item Validation on object type, cardinality, etc.
+    \end{itemize}
+\item[\textcolor{blue}{\textbf{Discovery}}] Multiple ways of finding information
+    \begin{itemize}
+    \item Queries using SPARQL
+    \item Searches using Lucene
+    \end{itemize}
+\end{list}
+\end{block}
+\end{frame}
+
+The PODD ontology is at the center of the repository and it drives quite a lot
+of repository functions. All the object metadata is saved as RDF triples
+conforming to the ontology definitions. When a web page of creating, editing
+or displaying an object is requested, the ontologies are used to determine
+what gets displayed and in what way.
+
+The domain objects are serialized into ontologies when they are saved and 
+deserialized when they are loaded from the underlying storage.
+
+Before we save and publish an object, the object's triples are validated against
+the domain ontology. Objects can be queried and searched for on the RDF triples.
+
+\begin{frame}{The PODD Ontology -- Object creation page rendering}
+ \begin{figure}[t]
+  \begin{center}
+  \includegraphics[width=76mm]{create.png}
+   \end{center}
+ \end{figure}
+\end{frame}
+
+\section{Conclusion}
+\subsection*{ }
+\begin{frame}{Conclusion}
+\begin{block}{To recap}
+\begin{itemize}
+\item Large amounts of data need to be managed
+    \begin{itemize}
+    \item There is a need for data archival, storage \& discovery
+    \end{itemize}
+\item Current approaches lacking/inadequate/inflexible
+    \begin{itemize}
+    \item Emerging processes, platforms, technologies require extensible infrastructure
+    \end{itemize}
+\item An ontology-driven approach as the foundation of PODD
+    \begin{itemize}
+    \item Extensible \& open
+    \end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+This slides shows a screen capture of the project creation page.
+Note that most of these fields are generated by reading the domain
+ontology and figuring out what fields are needed and what their types,
+cardinalites are.
+
+For example, in a previous slide we defined that a project must have 
+exactly 1 start date attribute and it must be a date. So here we show 
+an input box for this attribute and signal that it is mandatory. Note
+that lead institution is also a mandatory attribute while the duration
+is not. When this project object is saved, the values are checked against
+the domain ontology and any errors or omissions will be reported back
+to the user.
+
+\begin{frame}{Conclusion}
+\begin{block}{Where we are now}
+\begin{itemize}
+\item PODD ontology stabilizing
+\item Development of basic repository functionality
+\item Development of PODD web interface
+\end{itemize}
+\end{block}
+\pause
+\begin{block}{What's next}
+\begin{itemize}
+\item Development of batch data import/export processes
+\item Development of object discovery services
+\item Integrate with AAF federated authentication services
+\item \textcolor{gray}{Exposing data for discovery}
+\item \textcolor{gray}{Integrating with other data sources}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+    \begin{center}
+\Huge \textsc{\textcolor{blue}{\textbf{Thank You!}}}
+\end{center}
+\vspace{+20pt}
+\begin{block}{Acknowledgment}
+Faith Davies, Gavin Kennedy, Jane Hunter\\
+eResearch Lab, Schoo of ITEE, UQ
+\end{block}
+\end{frame}
+
+\end{document}
