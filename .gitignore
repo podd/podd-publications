@@ -1,4 +1,6 @@
 .svn
+*~
+*.backup
 *.aux
 *.bbl
 *.blg
