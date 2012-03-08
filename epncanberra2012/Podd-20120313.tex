@@ -34,9 +34,9 @@
 \pause
  \item Contain many variables
 \pause
- \item Experiment variables and results are noted and used in analysis.
+ \item Experiment variables and results are noted and used in analysis
 \pause
- \item Analysed results are used to make conclusions, which are published.
+ \item Analysed results are used to make conclusions, which are then published
 \end{itemize}
 \end{frame}
 
@@ -62,7 +62,7 @@
 \pause
  \item Single table not ideal for entire experiment
 \pause
- \item Not ideal for multiple different experiments
+ \item Not ideal for multiple structurally different experiments
 \end{itemize}
 \end{frame}
 
@@ -96,16 +96,16 @@
 \frametitle{Ontologies to define structure}
 
 \begin{itemize}
- \item Ontologies allow different structures for different experiments without changing the underlying database schema
+ \item Different structures for different experiments without changing the database schema
 \pause
- \item PODD has basic constraints
+ \item PODD has basic ontology constraints
 \begin{enumerate}
  \item Each ontology must have exactly one Project
  \item Each node must be connected to the Project through a unique series of ``part\_of'' links
- \item Each node can reference other nodes using ``refers\_to'' links
+ \item Each node can reference other eligible nodes using ``refers\_to'' links
 \end{enumerate}
 \pause
-\item A single ontology can be used with different unique experiments if it is designed well
+\item A single ontology can be used with different experiments if it is designed well
 \end{itemize}
 \end{frame}
 
@@ -124,9 +124,9 @@
 \begin{itemize}
  \item Projects can be published on completion, both in HTML and RDF
 \pause
- \item Published projects designed to be immutable
+ \item Published projects may be locked from future changes
 \pause
- \item Each data item has a URI
+ \item Each data item has a URI for references
 \end{itemize}
 \end{frame}
 
