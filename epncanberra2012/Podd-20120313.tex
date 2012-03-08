@@ -2,7 +2,7 @@
 
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
-\usepackage{beamerthemenirma}
+\usepackage{beamerthemeBerkeley}
 
 \usepackage[australian]{babel}
 \usepackage[T1]{fontenc}
@@ -30,13 +30,14 @@
 \frametitle{Scientific experiments}
 
 \begin{itemize}
- \item Aim to test hypotheses in known, partially controlled situations
+ \item Aim to test hypotheses in known, partially controlled, situations
 \pause
  \item Contain many variables
 \pause
- \item Experiment variables are noted in workbooks
+ \item Experiment variables and results are noted and used in analysis.
+\pause
+ \item Analysed results are used to make conclusions, which are published.
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}
@@ -47,13 +48,12 @@
 \pause
  \item Structure can vary
 \end{itemize}
-
 \end{frame}
 
 \section{Structured data}
 
 \begin{frame}
-\frametitle{Tables}
+\frametitle{Relational databases}
 
 \begin{itemize}
  \item Two dimensional structure
@@ -61,19 +61,19 @@
  \item Suit simple relationships
 \pause
  \item Single table not ideal for entire experiment
+\pause
+ \item Not ideal for multiple different experiments
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}
-\frametitle{Trees}
+\frametitle{Structured ontologies}
 
 \begin{itemize}
- \item Everything has a common root
+ \item A common root
 \pause
- \item Branches are independent of each other
+ \item Branches and leaves are independent of each other
 \end{itemize}
-
 \end{frame}
 
 \section{PODD Ontology Driven Database}
@@ -82,48 +82,63 @@
 \frametitle{PODD as a workbook}
 
 \begin{itemize}
- \item Vital metadata about each experiment
+ \item Vital metadata about each experiment in a single ontology
 \pause
  \item Variable number of headings and subheadings
 \pause
  \item Acceptable use of headings and subheadings is configurable
 \pause
- \item Each workbook is independent of other workbooks
+ \item Each experiment is independent of other experiments
 \end{itemize}
-
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Ontologies to define structure}
 
 \begin{itemize}
- \item Ontologies can be arbitrarily structured
+ \item Ontologies allow different structures for different experiments without changing the underlying database schema
 \pause
  \item PODD has basic constraints
 \begin{enumerate}
  \item Each ontology must have exactly one Project
- \item Each node must be connected to the Project through a series of ``part\_of'' links
+ \item Each node must be connected to the Project through a unique series of ``part\_of'' links
  \item Each node can reference other nodes using ``refers\_to'' links
 \end{enumerate}
 \pause
-\item Ontology defines acceptable structure without imposing a single schema on every workbook
-
+\item A single ontology can be used with different unique experiments if it is designed well
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}
 \frametitle{Phenomics ontology structure}
 
 \begin{center}
- \includegraphics[scale=0.40,keepaspectratio=true]{./podd_ont.pdf}
+ \includegraphics[scale=0.36,keepaspectratio=true]{./podd_ont.pdf}
  % podd_ont.pdf: 720x540 pixel, 72dpi, 25.40x19.05 cm, bb=0 0 720 540
 \end{center}
+\end{frame}
 
+\begin{frame}
+\frametitle{Publication}
+
+\begin{itemize}
+ \item Projects can be published on completion, both in HTML and RDF
+\pause
+ \item Published projects designed to be immutable
+\pause
+ \item Each data item has a URI
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Questions}
+
+Code can be found online at:
+
+\url{https://github.com/podd}
 
 \end{frame}
 
-
 \end{document}
+
 
