@@ -25,6 +25,11 @@
 \begin{frame}
 \frametitle{Background} 
 
+\begin{itemize}
+ \item PODD implemented between 2009 and 2011
+ \item Design by Yuan Fang Li and Gavin Kennedy
+\end{itemize}
+
 \end{frame}
 
 \begin{frame}
@@ -37,26 +42,26 @@
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Design} 
-
-\end{frame}
-
+% PODD Design/Architecture as a blank slide
 \bgroup
-% \setbeamertemplate{navigation symbols}{}
-% \setbeamercolor{background canvas}{bg=white}
-% \begin{frame}[plain]{}
+\usebackgroundtemplate{\includegraphics[
+width=\paperwidth,
+height=\paperheight,
+keepaspectratio=true
+]{podd_arch.png}}
+\begin{frame}[plain]{}
+\end{frame}
+\egroup
+
+
+% PODD Phenomics Ontology as a blank slide
+\bgroup
 \usebackgroundtemplate{\includegraphics[
 width=\paperwidth,
 height=\paperheight,
 keepaspectratio=true
 ]{podd_ont.png}}
 \begin{frame}[plain]{}
-% \frametitle{Phenomics ontology for PODD}
-% \invisible
-
-% \begin{center}
- % podd_ont.pdf: 720x540 pixel, 72dpi, 25.40x19.05 cm, bb=0 0 720 540
 \end{frame}
 \egroup
 
@@ -67,6 +72,21 @@ keepaspectratio=true
 
 \begin{frame}
 \frametitle{Evaluation}
+
+Good:
+
+\begin{enumerate}
+ \item Flexible : Simultaneously support different experiments
+ \item Adaptable : Additions and changes to schema ontologies
+\end{enumerate}
+
+Bad:
+
+\begin{enumerate}
+ \item Current implementation does not scale
+ \item Object oriented, pulling document into memory
+\end{enumerate}
+
 
 \end{frame}
 
@@ -79,12 +99,15 @@ keepaspectratio=true
 \begin{frame}
 \frametitle{Questions}
 
+\begin{center}
 Open source code can be found online at:
 
 \url{https://github.com/podd}
 
-My email is: peter.ansell@uq.edu.au
+\vskip 12pt
 
+My email is: peter.ansell@uq.edu.au
+\end{center}
 \end{frame}
 
 \end{document}
