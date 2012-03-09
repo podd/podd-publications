@@ -35,6 +35,12 @@
 \begin{frame}
 \frametitle{Motivation} 
 
+\begin{itemize}
+ \item Flexible scientific experiment management
+ \item Use RDF and OWL technology to support science
+\end{itemize}
+
+
 \end{frame}
 
 \begin{frame}
@@ -85,6 +91,7 @@ Bad:
 \begin{enumerate}
  \item Current implementation does not scale
  \item Object oriented, pulling document into memory
+ \item Dependencies not supported anymore, including OWL-1.1, Fedora-3.2 and Spring-2
 \end{enumerate}
 
 
@@ -92,6 +99,17 @@ Bad:
 
 \begin{frame}
 \frametitle{Next steps}
+
+Redesign of the internal implementation:
+
+\begin{itemize}
+ \item Single database, currently 4 databases
+ \item Only query data as needed
+ \item Use upcoming SPARQL 1.1 Query and Update standards
+ \item Use OWL-2
+ \item Support links from experiments to other RDF documents
+\end{itemize}
+
 
 \end{frame}
 
