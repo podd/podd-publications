@@ -27,7 +27,7 @@
 
 \begin{itemize}
  \item PODD implemented between 2009 and 2011
- \item Design by Yuan Fang Li and Gavin Kennedy
+ \item Design by Yuan Fang Li and Gavin Kennedy for High Resolution Plant Phenomics Centre
 \end{itemize}
 
 \end{frame}
@@ -45,6 +45,13 @@
 
 \begin{frame}
 \frametitle{Example} 
+
+Simultaneous Phenotyping of Drought Stress Tolerance in Arabidopsis OST1-2 Mutant and Wild Type 
+
+\vskip 12pt
+
+
+Credit to Xueqin Wang for the example design : \url{http://podd.plantphenomics.org.au/podd/object/poddObject:838}
 
 \end{frame}
 
@@ -74,6 +81,8 @@ keepaspectratio=true
 \begin{frame}
 \frametitle{Demo} 
 
+\url{http://podd.plantphenomics.org.au/podd}
+
 \end{frame}
 
 \begin{frame}
@@ -89,9 +98,9 @@ Good:
 Bad:
 
 \begin{enumerate}
- \item Current implementation does not scale
- \item Object oriented, pulling document into memory
- \item Dependencies not supported anymore, including OWL-1.1, Fedora-3.2 and Spring-2
+ \item Current implementation does not scale with experiment size
+ \item Only supports OWL-1.1
+ \item Uses old versions of Fedora and Spring
 \end{enumerate}
 
 
@@ -100,13 +109,9 @@ Bad:
 \begin{frame}
 \frametitle{Next steps}
 
-Redesign of the internal implementation:
-
 \begin{itemize}
- \item Single database, currently 4 databases
- \item Only query data as needed
  \item Use upcoming SPARQL 1.1 Query and Update standards
- \item Use OWL-2
+ \item Use OWL-2 and pure SPARQL access to databases
  \item Support links from experiments to other RDF documents
 \end{itemize}
 
