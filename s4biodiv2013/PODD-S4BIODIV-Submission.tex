@@ -290,7 +290,7 @@ semantically identify the different parts of the plants (Paproki et al, 2012). A
 longitudinal 3D matching pipeline for plant mesh parts is then used to evaluate 
 temporal changes at the whole plant and/or organ level. After initial
 processing to recreate the 3D structure, the raw data for each plant is packaged into
-one location using BagIt, an hierarchical file [6]. All bags belonging to the
+one location using BagIt, an hierarchical file \cite{Kunze2011}. All bags belonging to the
 same specific PODD project are grouped into collections on the CSIRO Data Access
 Portal. These bags have a permanent address which is recorded into PODD. Any
 additional processes on these digital objects (such as statistical information
@@ -340,7 +340,7 @@ systems.
 
 BagIt is defined by an Internet Engineering Task Force (IETF) document as an
 ``hierarchical file packaging format for storage and transfer of arbitrary
-digital content''[6]. A payload manifest details content and MD5 or SHA hashes
+digital content''\cite{Kunze2011}. A payload manifest details content and MD5 or SHA hashes
 for content integrity verification. Data file related metadata can be stored in
 pre-defined files as key-value pairs. For
 PlantScan\textsuperscript{\texttrademark}, file-level metadata
@@ -363,7 +363,7 @@ here) present in [8] but not in [7] was added to the latter.
 \section{CSIRO Data Access Portal}
 CSIRO's Research Data Service (RDS) has developed the Data Access Portal (DAP),
 an open source web application that enables research data to be discovered,
-managed and shared. [5]
+managed and shared. \cite{DAP}
 
 
 Researchers can describe a data collection, deposit data, choose a license, and
@@ -390,7 +390,7 @@ storage.
 \subsection{Bag preparation for a DAP collection}
 CSIRO’s HRPPC makes use of DAP to store collections of
 PlantScan\textsuperscript{\texttrademark} raw images
-and processed mesh data as bags [6]. Raw data from
+and processed mesh data as bags \cite{Kunze2011}. Raw data from
 PlantScan\textsuperscript{\texttrademark} local storage
 (HRPPC-Store) and data processed on HPC hosts are transferred to ASC bulk
 storage where image and mesh files are organised in folders by batch, then
@@ -492,8 +492,8 @@ References
 %[2] http://topbraid.org/spin/api/
 %[3] http://www.plantontology.org/
 %[4] http://www.geneontology.org/
-[5] https://wiki.csiro.au/confluence/display/dmsdoc/Home
-[6] http://datatracker.ietf.org/doc/draft-kunze-bagit/
+%[5] https://wiki.csiro.au/confluence/display/dmsdoc/Home
+%[6] http://datatracker.ietf.org/doc/draft-kunze-bagit/
 [7] https://pypi.python.org/pypi/bagit/
 [8] http://sourceforge.net/projects/loc-xferutils/
 [9] http://sourceforge.net/projects/loc-xferutils/files/loc-bagger/
