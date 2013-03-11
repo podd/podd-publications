@@ -351,14 +351,14 @@ The BagIt specification does not mandate a particular archiving strategy, the
 focus being upon the directory structure, special files, and integrity checking.
 Bag creation and payload manifest integrity checking, tools can take advantage
 of the multi-core capabilities of modern computing hardware. To suit current
-needs, BagIt-conforming tools [7] [8] [9] were assessed and where necessary,
+needs, BagIt-conforming tools \cite{Summers} [8] [9] were assessed and where necessary,
 improvements were implemented and tested. For example, the implementation of [8]
 assumed that as many threads as possible should be created for multi-threaded
 operations such as bag creation and payload manifest verification. On a HPC host
 with hundreds of processors, this can lead to runaway thread creation, so this
-needed to be addressed. Neither [7] nor [8] permitted payload files in a bag to
+needed to be addressed. Neither \cite{Summers} nor [8] permitted payload files in a bag to
 be listed. This has since been added to [8]. Some functionality (not discussed
-here) present in [8] but not in [7] was added to the latter.
+here) present in [8] but not in \cite{Summers} was added to the latter.
 
 \section{CSIRO Data Access Portal}
 CSIRO's Research Data Service (RDS) has developed the Data Access Portal (DAP),
@@ -494,7 +494,7 @@ References
 %[4] http://www.geneontology.org/
 %[5] https://wiki.csiro.au/confluence/display/dmsdoc/Home
 %[6] http://datatracker.ietf.org/doc/draft-kunze-bagit/
-[7] https://pypi.python.org/pypi/bagit/
+%[7] https://pypi.python.org/pypi/bagit/
 [8] http://sourceforge.net/projects/loc-xferutils/
 [9] http://sourceforge.net/projects/loc-xferutils/files/loc-bagger/
 %[10] https://wiki.csiro.au/display/ASC
