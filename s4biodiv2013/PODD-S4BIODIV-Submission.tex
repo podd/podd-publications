@@ -145,7 +145,8 @@ concepts.
 Increasingly however, providers of scientific datasets are focusing on enhancing
 their datasets using curated scientific concepts from ontologies. For example,
 scientists have used the Gene Ontology \cite{Ashburner2000} to link well known concepts to
-represent common elements across genomics datasets. If these annotations are
+represent common elements across genomics datasets, while the Plant Ontology \cite{Avraham2008} 
+allows the description of plant based datasets. If these annotations are
 given using recognised URIs, and not as key-value string tuples, various RDF
 documents can be merged automatically based on RDF semantics to discover novel
 conclusions. Initially, different providers were not able to decide on URIs to
@@ -158,7 +159,7 @@ data from various locations.
 
 
 \subsection{Redesign of the Phenomics Ontology Driven Data repository}
-As described earlier, the PODD repository relies on semantic web technologies to
+The PODD repository relies on semantic web technologies to
 manage phenomics data and metadata. Although both ontologies and mappings are
 essential, in PODD it was necessary to build the system with a relaxed
 ontological vocabulary to allow scientists to generate datasets before they were
@@ -224,115 +225,51 @@ in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
 \end{figure}
 
 
-An ontology is a common controlled vocabulary about a particular topic, in this
-case plant phenomics. The PODD Plant ontology therefore becomes an ontology for
-plant phenomics that extends the generally applicable PODD Science ontology with
-plant phenomics specific details \cite{Li2010}. This approach allows PODD to model
-multiple phenomics processes without enforcing a rigid data structure on
-objects, either now, in the past, or in the future. In addition, other community
-ontologies, such as the plant and gene ontologies \cite{Ashburner2000,Avraham2008}, can be used to
-annotate the data. This not only supports data discovery, but provides common
-reference points through which PODD managed data can be integrated with data in
-other research databases.
+% An ontology is a common controlled vocabulary about a particular topic, in this
+% case plant phenomics. The PODD Plant ontology therefore becomes an ontology for
+% plant phenomics that extends the generally applicable PODD Science ontology with
+% plant phenomics specific details \cite{Li2010}. This approach allows PODD to model
+% multiple phenomics processes without enforcing a rigid data structure on
+% objects, either now, in the past, or in the future. In addition, other community
+% ontologies, such as the plant and gene ontologies \cite{Ashburner2000,Avraham2008}, can be used to
+% annotate the data. This not only supports data discovery, but provides common
+% reference points through which PODD managed data can be integrated with data in
+% other research databases.
 
 
-The PODD application handles the instantiation and validation of objects based
-on the versions of ontologies that are specified by the user as being relevant.
-This gives PODD a unique extensibility as the domain knowledge is entirely
-captured in the ontology, and the operational aspects of the system are derived
-purely from the content of the ontology. In particular, PODD is designed around
-the ability to support multiple versions of ontologies concurrently. Previously
-published artifacts can be loaded without modification into PODD without
-affecting current studies that may be using newer, incompatible, versions of the
-schema ontologies.
+% The PODD application handles the instantiation and validation of objects based
+% on the versions of ontologies that are specified by the user as being relevant.
+% This gives PODD a unique extensibility as the domain knowledge is entirely
+% captured in the ontology, and the operational aspects of the system are derived
+% purely from the content of the ontology. In particular, PODD is designed around
+% the ability to support multiple versions of ontologies concurrently. Previously
+% published artifacts can be loaded without modification into PODD without
+% affecting current studies that may be using newer, incompatible, versions of the
+% schema ontologies.
 
 
-PODD is able to manage high volume, high resolution, heterogeneous datasets
-using a tree based structure, which in the PODD Science ontology is based on the
-concept of a ``Project''. 
-%(http://podd.plantphenomics.org.au/podd/). 
-Data
-references are inserted into projects using subproperties of the PODD
-``contains'' predicate. When results are available they are inserted
-independently and cross-referenced with the data that they were derived from
-using a subproperty of the PODD ``refers to'' property. Each of the
-subproperties have constraints on the types of objects that are valid as sources
-and destinations, making it easy to both validate existing uses, and suggest
-potential targets based on a source and a property.
+% PODD is able to manage high volume, high resolution, heterogeneous datasets
+% using a tree based structure, which in the PODD Science ontology is based on the
+% concept of a ``Project''. 
+% %(http://podd.plantphenomics.org.au/podd/). 
+% Data
+% references are inserted into projects using subproperties of the PODD
+% ``contains'' predicate. When results are available they are inserted
+% independently and cross-referenced with the data that they were derived from
+% using a subproperty of the PODD ``refers to'' property. Each of the
+% subproperties have constraints on the types of objects that are valid as sources
+% and destinations, making it easy to both validate existing uses, and suggest
+% potential targets based on a source and a property.
 
 
-The genotype of the plant alone does not determine the phenotype; it is the
-combination of the organism’s genome with the environmental conditions that
-determine the phenotype. PODD captures metadata on the genotype of the
-organism(s) under investigation. PODD also gathers comprehensive metadata on the
-environmental conditions and treatments that the biological samples are exposed
-to. This structure makes PODD suitable to queries by web agents thus  linking
-information contained in other data repositories, e.g genomics, transcriptomics,
-metabolomics to phenomics information.  
-
-
-\section{The PlantScan\textsuperscript{\texttrademark} digitisation platform}
-% See unresolved comment at the end
-
-%System description and Processes
-
-\subsection{Heterogeneous data streams}
-
-PlantScan\textsuperscript{\texttrademark} is a medium throughput high resolution
-phenotyping platform, which brings together a number of imaging sensors--light 
-detection and ranging, far-infrared imaging, and multi-wavelength imaging--to non-invasively measure plant growth and function using in-silico approaches.
-% FIXME: TODO: [REF?] for PlantScan. 
-Raw data is captured with
-its contextual information (e.g. system configuration, time of acquisition,
-batch number and project) and is stored in a purpose-built database as the data
-is being generated. The various data streams are collated and used to produce
-full 3D representation of each plant with overlaid spectral information. The
-metadata collected during image acquisition are necessary inputs for the
-computer vision techniques which are used to create the 3D representation of the
-plant.
-% FIXME: TODO: Create Figure 3
-%(Figure 3)[e]. 
-The 3D meshes are then automatically segmented in order to
-semantically identify the different parts of the plants (Paproki et al, 2012). A
-longitudinal 3D matching pipeline for plant mesh parts is then used to evaluate 
-temporal changes at the whole plant and/or organ level. After initial
-processing to recreate the 3D structure, the raw data for each plant is packaged into
-one location using BagIt, an hierarchical file \cite{Kunze2011}. All bags belonging to the
-same specific PODD project are grouped into collections on the CSIRO Data Access
-Portal. These bags have a permanent address which is recorded into PODD. Any
-additional processes on these digital objects (such as statistical information
-on features like plant colour, volume,  growth etc. and on elements such as
-petiole, stem, leaf) are also captured by PODD (Figure 1). Metadata
-Each acquisition on PlantScan\textsuperscript{\texttrademark} includes metadata
-(in addition to the raw data
-streams), such as plant genus and species, project and experiment metadata, a
-unique identifier for each image (Globally Unique Identifier), imaging angle,
-environmental temperature of the imaging chamber, location of optical and colour
-calibration datasets for each acquisition run, LiDAR (Light Detection and
-Ranging Sensors) calibration files. The metadata associated with each
-acquisition is automatically generated when setting up the configuration on the
-platform. This information is paramount to validate and process the raw image
-data, and for the post-processing phases. This information currently resides in
-the PlantScan\textsuperscript{\texttrademark} database.
-
-
-\subsection{Data volume}
-Digitisation systems such as PlantScan\textsuperscript{\texttrademark} generate
-huge amounts of data including
-raw image data, registration metadata, sensor configurations and plant metadata.
-For example, PlantScan\textsuperscript{\texttrademark} generates around 500GB of
-raw image data, representing
-in excess of 200,000 database records, per day. Sufficient storage space
-(usually at remote locations) and fast network transfer rates were thus
-necessary to facilitate data movement for processing using high performance
-computers (HPC). Because an RDF database structure is not suitable for handling
-large data sets of images, it was necessary to package the raw information into
-elementary units with permanent addresses which could be retrieved using PODD. 
-The CSIRO Data Access Portal (DAP) \cite{DAP} and Advanced
-Scientific Computing (ASC) storage and compute facilities \cite{ASC} are key
-resources used by PlantScan\textsuperscript{\texttrademark} to
-process and store bulk data.
-
+% The genotype of the plant alone does not determine the phenotype; it is the
+% combination of the organism’s genome with the environmental conditions that
+% determine the phenotype. PODD captures metadata on the genotype of the
+% organism(s) under investigation. PODD also gathers comprehensive metadata on the
+% environmental conditions and treatments that the biological samples are exposed
+% to. This structure makes PODD suitable to queries by web agents thus  linking
+% information contained in other data repositories, e.g genomics, transcriptomics,
+% metabolomics to phenomics information.  
 
 \section{CSIRO Data Access Portal}
 CSIRO's Research Data Service (RDS) has developed the Data Access Portal (DAP),
@@ -358,6 +295,10 @@ infrastructure includes petabyte-level, multi-decade, backed-up disk storage,
 integrity checking, and automated migration of data collections to and from tape
 storage.
 
+\section{The PlantScan\textsuperscript{\texttrademark} digitisation platform}
+% See unresolved comment at the end
+
+%System description and Processes
 
 \subsection{BagIt}
 
@@ -373,8 +314,9 @@ specification does not mandate a particular archiving strategy, with the
 focus being upon the directory structure, special files, and integrity checking.
 % Bag creation and payload manifest integrity checking, tools can take advantage
 % of the multi-core capabilities of modern computing hardware. 
-To suit current
-needs, BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
+% To suit current
+% needs, 
+BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
 improvements were implemented and tested to ensure that the tools were scalable with the size of the collections being created. 
 % For example, the implementation of \cite{LoCBagger}
 % assumed that as many threads as possible should be created for multi-threaded
@@ -426,6 +368,71 @@ discoverable via DAP. In addition, experiment reports, published papers, and
 sensor configurations can either be made accessible via a DAP collection's
 ``related materials'' links, other metadata fields, or within the collection's
 data (e.g. bag).
+
+\subsection{Heterogeneous data streams}
+
+PlantScan\textsuperscript{\texttrademark} is a medium throughput high resolution
+phenotyping platform, which brings together a number of imaging sensors--light 
+detection and ranging, far-infrared imaging, and multi-wavelength imaging--to non-invasively measure plant growth and function using in-silico approaches.
+% FIXME: TODO: [REF?] for PlantScan. 
+Raw data is captured with
+its contextual information (e.g. system configuration, time of acquisition,
+batch number and project) and is stored in a purpose-built database as the data
+is being generated. The various data streams are collated and used to produce
+full 3D representation of each plant with overlaid spectral information. The
+metadata collected during image acquisition are necessary inputs for the
+computer vision techniques which are used to create the 3D representation of the
+plant.
+% FIXME: TODO: Create Figure 3
+%(Figure 3)[e]. 
+The 3D meshes are then automatically segmented in order to
+semantically identify the different parts of the plants (Paproki et al, 2012). A
+longitudinal 3D matching pipeline for plant mesh parts is then used to evaluate 
+temporal changes at the whole plant and/or organ level. 
+
+% After initial processing to recreate the 3D structure, the raw data for each plant is packaged into
+% one location using BagIt. All bags belonging to the
+% same specific PODD project are grouped into collections on the CSIRO Data Access
+% Portal. These bags have a permanent address which is recorded into PODD. Any
+% additional processes on these digital objects (such as statistical information
+% on features like plant colour, volume,  growth etc. and on elements such as
+% petiole, stem, leaf) are also captured by PODD using the properties in the 
+% PODD Plant Ontology (Figure~\ref{poddontologies}).
+
+\subsection{Metadata}
+Each acquisition on PlantScan\textsuperscript{\texttrademark} includes metadata
+(in addition to the raw data
+streams), such as plant genus and species, project and experiment metadata, a
+unique identifier for each image (Globally Unique Identifier), imaging angle,
+environmental temperature of the imaging chamber, location of optical and colour
+calibration datasets for each acquisition run, LiDAR (Light Detection and
+Ranging Sensors) calibration files. The metadata associated with each
+acquisition is automatically generated when setting up the configuration on the
+platform. This information is paramount to validate and process the raw image
+data, and for the post-processing phases. This information currently resides in
+the PlantScan\textsuperscript{\texttrademark} database.
+
+
+\subsection{Data volume}
+Digitisation systems such as PlantScan\textsuperscript{\texttrademark} generate
+huge amounts of data including
+raw image data, registration metadata, sensor configurations and plant metadata.
+For example, PlantScan\textsuperscript{\texttrademark} generates around 500GB of
+raw image data, representing
+in excess of 200,000 database records, per day. Sufficient storage space
+(usually at remote locations) and fast network transfer rates were thus
+necessary to facilitate data movement for processing using high performance
+computers (HPC). Because an RDF database structure is not suitable for handling
+large data sets of images, it was necessary to package the raw information into
+elementary units with permanent addresses which could be retrieved using PODD. 
+The CSIRO Data Access Portal (DAP) \cite{DAP} and Advanced
+Scientific Computing (ASC) storage and compute facilities \cite{ASC} are key
+resources used by PlantScan\textsuperscript{\texttrademark} to
+process and store bulk data.
+
+
+
+
 
 
 \section{Semantic integration}
