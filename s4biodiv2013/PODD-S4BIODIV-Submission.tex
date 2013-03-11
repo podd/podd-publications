@@ -351,14 +351,15 @@ The BagIt specification does not mandate a particular archiving strategy, the
 focus being upon the directory structure, special files, and integrity checking.
 Bag creation and payload manifest integrity checking, tools can take advantage
 of the multi-core capabilities of modern computing hardware. To suit current
-needs, BagIt-conforming tools \cite{Summers} [8] [9] were assessed and where necessary,
-improvements were implemented and tested. For example, the implementation of [8]
+needs, BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
+improvements were implemented and tested. For example, the implementation of \cite{LoCBagger}
 assumed that as many threads as possible should be created for multi-threaded
 operations such as bag creation and payload manifest verification. On a HPC host
 with hundreds of processors, this can lead to runaway thread creation, so this
-needed to be addressed. Neither \cite{Summers} nor [8] permitted payload files in a bag to
-be listed. This has since been added to [8]. Some functionality (not discussed
-here) present in [8] but not in \cite{Summers} was added to the latter.
+needed to be addressed. Neither \cite{Summers} nor \cite{LoCBagger} permitted payload files in a bag to
+be listed. This has since been added to \cite{LoCBagger}. 
+%Some functionality (not discussed
+%here) present in [8] but not in \cite{Summers} was added to the latter.
 
 \section{CSIRO Data Access Portal}
 CSIRO's Research Data Service (RDS) has developed the Data Access Portal (DAP),
@@ -487,7 +488,7 @@ both human and machine readable formats.
 \bibliographystyle{splncs}
 \bibliography{podd-bibliography}
 
-References
+%References
 %[1] http://www.iucr.org/\_\_data/iucr/lists/epc-l/pdf00003.pdf
 %[2] http://topbraid.org/spin/api/
 %[3] http://www.plantontology.org/
@@ -495,8 +496,8 @@ References
 %[5] https://wiki.csiro.au/confluence/display/dmsdoc/Home
 %[6] http://datatracker.ietf.org/doc/draft-kunze-bagit/
 %[7] https://pypi.python.org/pypi/bagit/
-[8] http://sourceforge.net/projects/loc-xferutils/
-[9] http://sourceforge.net/projects/loc-xferutils/files/loc-bagger/
+%[8] http://sourceforge.net/projects/loc-xferutils/
+%[9] http://sourceforge.net/projects/loc-xferutils/files/loc-bagger/
 %[10] https://wiki.csiro.au/display/ASC
 %[11] doi:10.1109/COINFO.2009.66 
 %[12] doi:10.1016/j.jbi.2008.03.004
