@@ -329,50 +329,15 @@ computers (HPC). Because an RDF database structure is not suitable for handling
 large data sets of images, it was necessary to package the raw information into
 elementary units with permanent addresses which could be retrieved using PODD. 
 The CSIRO Data Access Portal (DAP) \cite{DAP} and Advanced
-Scientific Computing (ASC) storage and compute facilities \cite{ASC} are key resources used by
-PlantScan\textsuperscript{\texttrademark} to
+Scientific Computing (ASC) storage and compute facilities \cite{ASC} are key
+resources used by PlantScan\textsuperscript{\texttrademark} to
 process and store bulk data.
 
-
-\section{CSIRO High Performance Compute Infrastructure}
-CSIRO ASC shared facilities \cite{ASC} are used to process the raw
-PlantScan\textsuperscript{\texttrademark} data to
-derive data products (meshes). Raw data and meshes are ``bagged'' and stored in
-the ASC archival system. ASC High Performance Compute (HPC) hosts (systems with
-high processor count and large memory) are taken advantage of to create and
-verify bags more rapidly than would be possible on conventional computer
-systems.
-
-\subsection{BagIt}
-
-BagIt is defined by an Internet Engineering Task Force (IETF) document as an
-``hierarchical file packaging format for storage and transfer of arbitrary
-digital content''\cite{Kunze2011}. A payload manifest details content and MD5 or SHA hashes
-for content integrity verification. Data file related metadata can be stored in
-pre-defined files as key-value pairs. For
-PlantScan\textsuperscript{\texttrademark}, file-level metadata
-includes plant barcodes, batch numbers, and plant type.
-
-
-The BagIt specification does not mandate a particular archiving strategy, the
-focus being upon the directory structure, special files, and integrity checking.
-Bag creation and payload manifest integrity checking, tools can take advantage
-of the multi-core capabilities of modern computing hardware. To suit current
-needs, BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
-improvements were implemented and tested. For example, the implementation of \cite{LoCBagger}
-assumed that as many threads as possible should be created for multi-threaded
-operations such as bag creation and payload manifest verification. On a HPC host
-with hundreds of processors, this can lead to runaway thread creation, so this
-needed to be addressed. Neither \cite{Summers} nor \cite{LoCBagger} permitted payload files in a bag to
-be listed. This has since been added to \cite{LoCBagger}. 
-%Some functionality (not discussed
-%here) present in [8] but not in \cite{Summers} was added to the latter.
 
 \section{CSIRO Data Access Portal}
 CSIRO's Research Data Service (RDS) has developed the Data Access Portal (DAP),
 an open source web application that enables research data to be discovered,
 managed and shared. \cite{DAP}
-
 
 Researchers can describe a data collection, deposit data, choose a license, and
 add attribution details. Access to a collection’s description and/or data can be
@@ -394,11 +359,44 @@ integrity checking, and automated migration of data collections to and from tape
 storage.
 
 
+\subsection{BagIt}
+
+BagIt is defined by an Internet Engineering Task Force (IETF) document as an
+``hierarchical file packaging format for storage and transfer of arbitrary
+digital content''\cite{Kunze2011}. A payload manifest details content and MD5 or SHA hashes
+for content integrity verification. Data file related metadata can be stored in
+pre-defined files as key-value pairs. 
+
+For PlantScan\textsuperscript{\texttrademark}, file-level metadata
+includes plant barcodes, batch numbers, and plant type, although the BagIt
+specification does not mandate a particular archiving strategy, with the
+focus being upon the directory structure, special files, and integrity checking.
+% Bag creation and payload manifest integrity checking, tools can take advantage
+% of the multi-core capabilities of modern computing hardware. 
+To suit current
+needs, BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
+improvements were implemented and tested to ensure that the tools were scalable with the size of the collections being created. 
+% For example, the implementation of \cite{LoCBagger}
+% assumed that as many threads as possible should be created for multi-threaded
+% operations such as bag creation and payload manifest verification. On a HPC host
+% with hundreds of processors, this can lead to runaway thread creation, so this
+% needed to be addressed. Neither \cite{Summers} nor \cite{LoCBagger} permitted payload files in a bag to
+% be listed. This has since been added to \cite{LoCBagger}. 
+%Some functionality (not discussed
+%here) present in [8] but not in \cite{Summers} was added to the latter.
 
 \subsection{Bag preparation for a DAP collection}
-CSIRO’s HRPPC makes use of DAP to store collections of
+
+
+CSIRO ASC shared facilities \cite{ASC} are used to process the raw
+PlantScan\textsuperscript{\texttrademark} data to
+derive data products (meshes). Raw data and meshes are collected using the BagIt format \cite{Kunze2011} and stored in
+the ASC archival system. ASC High Performance Compute (HPC) hosts (systems with
+high processor count and large memory) are taken advantage of to create and
+verify bags more rapidly than would be possible on conventional computer
+systems. The DAP to store collections of
 PlantScan\textsuperscript{\texttrademark} raw images
-and processed mesh data as bags \cite{Kunze2011}. Raw data from
+and processed mesh data as bags . Raw data from
 PlantScan\textsuperscript{\texttrademark} local storage
 (HRPPC-Store) and data processed on HPC hosts are transferred to ASC bulk
 storage where image and mesh files are organised in folders by batch, then
