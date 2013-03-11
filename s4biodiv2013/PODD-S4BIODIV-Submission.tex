@@ -279,7 +279,7 @@ an open source web application that enables research data to be discovered,
 managed and shared. \cite{DAP}
 
 Researchers can describe a data collection, deposit data, choose a license, and
-add attribution details. Access to a collection’s description and/or data can be
+add attribution details. Access to a collection's description and/or data can be
 restricted to CSIRO or a set of individuals (within CSIRO or partner
 organisations) or it can be made public, becoming searchable by anyone via the
 Internet. In the case where a collection and its data are public, a Digital
@@ -319,7 +319,7 @@ focus being upon the directory structure, special files, and integrity checking.
 % To suit current
 % needs, 
 BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
-improvements were implemented and tested to ensure that the tools were scalable with the size of the collections being created. 
+improvements were implemented and tested to ensure that the tools were fit for purpose in the ASC HPC environment.
 % For example, the implementation of \cite{LoCBagger}
 % assumed that as many threads as possible should be created for multi-threaded
 % operations such as bag creation and payload manifest verification. On a HPC host
@@ -338,9 +338,12 @@ Raw data and meshes are collected using the BagIt format \cite{Kunze2011} and
 stored in the ASC archival system. ASC High Performance Compute (HPC) hosts
 (systems with high processor count and large memory) are taken advantage of to
 create and verify bags more rapidly than would be possible on conventional
-computer systems. DAP is used to store collections of
-PlantScan\textsuperscript{\texttrademark} 
-raw images and processed mesh data as bags. Currently, one bag is equivalent to
+computer systems. 
+CSIRO's HRPPC makes use of DAP to store collections of PlantScan\textsuperscript{\texttrademark} raw images and processed mesh data as bags.
+%DAP is used to store collections of
+%PlantScan\textsuperscript{\texttrademark} 
+%raw images and processed mesh data as bags. 
+Currently, one bag is equivalent to
 a single batch scanned on the
 PlantScan\textsuperscript{\texttrademark}
 local software system, which usually means the same kind of plant with different
