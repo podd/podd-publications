@@ -106,14 +106,14 @@ experts and embedding users of phenomics technologies into it. The result of the
 approach is a state of the art computational and data mining environment,
 optimised for data access, data discovery and data sharing, which also provides
 the flexibility for linking genomic information through the use of RDF triples.
-In this context, we also describe the role of the CSIRO Data Access Portal (DAP,
-http://data.csiro.au) to annotate and store raw and processed datasets. DAP also
+In this context, we also describe the role of the CSIRO Data Access Portal (DAP) \cite{DAP}
+%http://data.csiro.au) 
+to annotate and store raw and processed datasets. DAP also
 provides long term secure storage for data collections and the ability to search
 for, control access to, and cite them via Digital Object Identifiers. PODD
 manages the mapping of collections located in DAP to PODD projects, providing
-for the storage of large images and documents unsuited to RDF databases. Figure
-1. shows
-the relationship between components and key data flows.
+for the storage of large images and documents unsuited to RDF databases. Figure~\ref{hrppccomponents}
+ shows the relationship between components and key data flows.
 
 
 %%Figure 1. HRPPC component relationships and data flow
@@ -121,7 +121,7 @@ the relationship between components and key data flows.
 \begin{center}
  \includegraphics[width=12cm,keepaspectratio=true]{plantscan-workflow-figure1.png}
  % plantscan-workflow-figure1.png: 598x330 pixel, 72dpi, 21.10x11.64 cm, bb=0 0
-598 330
+%598 330
 
 \caption{HRPPC component relationships and data flow}
 \label{hrppccomponents}
@@ -211,7 +211,7 @@ in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
 \begin{center}
  \includegraphics[width=12cm,keepaspectratio=true]{podd-ontologies-figure2.png}
  % podd-ontologies-figure2.png: 5097x2360 pixel, 600dpi, 21.58x9.99 cm, bb=0 0
-612 283
+%612 283
 
 \caption{PODD ontology hierarchy}
 \label{poddontologies}
@@ -282,11 +282,14 @@ is being generated. The various data streams are collated and used to produce
 full 3D representation of each plant with overlaid spectral information. The
 metadata collected during image acquisition are necessary inputs for the
 computer vision techniques which are used to create the 3D representation of the
-plant (Figure 3)[e]. The 3D meshes are then automatically segmented in order to
+plant.
+% FIXME: TODO: Create Figure 3
+%(Figure 3)[e]. 
+The 3D meshes are then automatically segmented in order to
 semantically identify the different parts of the plants (Paproki et al, 2012). A
 longitudinal 3D matching pipeline for plant mesh parts is then used to evaluate 
 temporal changes at the whole plant and/or organ level. After initial
-processing, i.e. 3D reconstruction, the raw data for each plant is packaged into
+processing to recreate the 3D structure, the raw data for each plant is packaged into
 one location using BagIt, an hierarchical file [6]. All bags belonging to the
 same specific PODD project are grouped into collections on the CSIRO Data Access
 Portal. These bags have a permanent address which is recorded into PODD. Any
@@ -318,9 +321,8 @@ necessary to facilitate data movement for processing using high performance
 computers (HPC). Because an RDF database structure is not suitable for handling
 large data sets of images, it was necessary to package the raw information into
 elementary units with permanent addresses which could be retrieved using PODD. 
-The CSIRO Data Access Portal (DAP) \footnote{http://data.csiro.au} and Advanced
-Scientific Computing (ASC) storage and compute facilities
-\footnote{https://wiki.csiro.au/display/ASC} are key resources used by
+The CSIRO Data Access Portal (DAP) \cite{DAP} and Advanced
+Scientific Computing (ASC) storage and compute facilities \cite{ASC} are key resources used by
 PlantScan\textsuperscript{\texttrademark} to
 process and store bulk data.
 
@@ -506,12 +508,12 @@ References
 %
 % [a]Xavier Sirault:
 % NOTE:Submitted papers should not exceed 15 pages for long papers and 8 pages
-for
+%for
 % short papers and must be formatted according to the LNCS guidelines. 
 %  
 % Proceedings of the workshop will be published online at CEUR Workshop
 % Proceedings (www.CEUR-WS.org ). The 3 best papers presented at the workshop
-will
+%will
 % be included in the supplementary Springer LNCS (Lecture Notes in Computer
 % Science ) proceedings of the ESWC2013 conference.
 % ________________
@@ -528,9 +530,9 @@ will
 % 136 words
 % [c]David Benn:
 % "DAP" has been removed from the abstract. I know it looms large in the paper
-but
+%but
 % is it worth adding something like "and data collection publication"? I've
-added
+%added
 % this in but I understand if it's not okay because we're space challenged.
 % ________________
 % Xavier Sirault:
@@ -552,7 +554,7 @@ added
 % ________________
 % David Benn:
 % How about something like: "Plant phenomics imaging, processing, metadata
-capture
+%capture
 % and publication". Too verbose I know.
 % [e]Xavier Sirault:
 % Jianming, could you please put a 3D model of tobacco with overlaid RGB signal?
@@ -562,7 +564,7 @@ capture
 % ________________
 % David Benn:
 % Do we want to simply change "Figure 4" to "Figure 1" here, or are you
-suggesting
+%suggesting
 % we move the diagram?
 % ________________
 % David Benn:
@@ -570,4 +572,4 @@ suggesting
 % ________________
 % David Benn:
 % Not sure whether this is all we want to do or to physically move Fig 1 to
-here.
+%here.
