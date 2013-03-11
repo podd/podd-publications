@@ -313,7 +313,7 @@ focus being upon the directory structure, special files, and integrity checking.
 % To suit current
 % needs, 
 BagIt-conforming tools \cite{Summers} \cite{LoCBagger} were assessed and where necessary,
-improvements were implemented and tested to ensure that the tools were fit for purpose in the ASC HPC environment.
+improvements were implemented and tested to ensure that the tools were fit for purpose in the CSIRO Advanced Scientific Computing (ASC) HPC environment.
 % For example, the implementation of \cite{LoCBagger}
 % assumed that as many threads as possible should be created for multi-threaded
 % operations such as bag creation and payload manifest verification. On a HPC host
@@ -348,9 +348,9 @@ Raw data from
 PlantScan\textsuperscript{\texttrademark} 
 local storage (HRPPC-Store) and data processed on HPC hosts are transferred to
 ASC bulk storage where image and mesh files are organised in folders by batch,
-then barcode number, then subfolders for each image file type (e.g. RGB images,
-IR images, LiDAR) and meshes. Bag creation is carried out via an allocated ASC
-HPC job.
+then barcode number, then subfolders for each image file type, including RGB images,
+IR images, and LiDAR (Light Detection and
+Ranging Sensors, and their related meshes. Bag creation is carried out via an allocated ASC HPC job.
 % However the
 % naming, content and amount of data in a bag are flexible and depend upon the
 % intention of the bag. For example, multiple batches can be packed into one bag
@@ -404,8 +404,7 @@ Each acquisition on PlantScan\textsuperscript{\texttrademark} includes metadata
 streams), such as plant genus and species, project and experiment metadata, a
 unique identifier for each image (Globally Unique Identifier), imaging angle,
 environmental temperature of the imaging chamber, location of optical and colour
-calibration datasets for each acquisition run, LiDAR (Light Detection and
-Ranging Sensors) calibration files. The metadata associated with each
+calibration datasets for each acquisition run, and LiDAR calibration files. The metadata associated with each
 acquisition is automatically generated when setting up the configuration on the
 platform. This information is paramount to validate and process the raw image
 data, and for the post-processing phases. 
@@ -420,10 +419,10 @@ raw image data, registration metadata, sensor configurations and plant metadata.
 For example, PlantScan\textsuperscript{\texttrademark} generates around 500GB of
 raw image data, representing
 in excess of 200,000 database records, per day. Sufficient storage space
-(usually at remote locations) and fast network transfer rates were thus
+(usually at remote locations) and fast network transfer rates are thus
 necessary to facilitate data movement for processing using high performance
 computers (HPC). Because an RDF database structure is not suitable for handling
-large data sets of images, it was necessary to package the raw information into
+large data sets of images, it is necessary to package the raw information into
 elementary units with permanent addresses which could be retrieved using PODD. 
 The CSIRO DAP \cite{DAP} and ASC storage and compute facilities \cite{ASC} are key
 resources used by PlantScan\textsuperscript{\texttrademark} to
