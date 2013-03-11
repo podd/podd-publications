@@ -4,15 +4,21 @@
 
 \title{Flexible Scientific Data Management for Plant Phenomics Research}
 
-%Autors: Peter Ansell1, Robert Furbank2, Kutila Gunasekera1, Jianming Guo2, David Benn3, Gareth Williams3, Xavier Sirault2
-\author{Peter Ansell\inst{1}, Robert Furbank\inst{2}, Kutila Gunasekera\inst{1}, Jianming Guo\inst{2}, David Benn\inst{3}, Gareth Williams\inst{3}, Xavier Sirault\inst{2}}
+%Autors: Peter Ansell1, Robert Furbank2, Kutila Gunasekera1, Jianming Guo2,
+%David Benn3, Gareth Williams3, Xavier Sirault2
+\author{Peter Ansell\inst{1}, Robert Furbank\inst{2}, Kutila Gunasekera\inst{1},
+Jianming Guo\inst{2}, David Benn\inst{3}, Gareth Williams\inst{3}, Xavier
+Sirault\inst{2}}
 
 %Affiliation:
 \institute{
-      eResearch Group, School of Information Technology and Electronic Engineering,
+      eResearch Group, School of Information Technology and Electronic
+Engineering,
              University of Queensland, Brisbane, Australia
- \and CSIRO Plant industry, High Resolution Plant Phenomics Centre, Canberra, Australia
- \and CSIRO IMT Advanced Scientific Computing and Research Data Services, Melbourne, Australia}
+ \and CSIRO Plant industry, High Resolution Plant Phenomics Centre, Canberra,
+Australia
+ \and CSIRO IMT Advanced Scientific Computing and Research Data Services,
+Melbourne, Australia}
  
 \begin{document}
 
@@ -21,7 +27,8 @@
 \begin{abstract}
  
 In this paper, we expand on the design and implementation of the Phenomics
-Ontology Driven Data repository \cite{Li2010} (PODD) with respect to the capture, storage
+Ontology Driven Data repository \cite{Li2010} (PODD) with respect to the
+capture, storage
 and retrieval of data and metadata generated at the High Resolution Plant
 Phenomics Centre (Canberra, Australia). PODD is a schema-driven Semantic Web
 database which uses the Resource Description Framework (RDF) model to store
@@ -37,7 +44,8 @@ their relationship to PODD.
 
 \end{abstract}
 
-%\keywords{eResearch, Semantic Web, RDF, OWL, Data collection citation, BagIt, Data Access Portal}
+%\keywords{eResearch, Semantic Web, RDF, OWL, Data collection citation, BagIt,
+% Data Access Portal}
 
 \section{Introduction}
 Since the genomics era, biology has become a data-driven science. Advances in
@@ -103,7 +111,8 @@ http://data.csiro.au) to annotate and store raw and processed datasets. DAP also
 provides long term secure storage for data collections and the ability to search
 for, control access to, and cite them via Digital Object Identifiers. PODD
 manages the mapping of collections located in DAP to PODD projects, providing
-for the storage of large images and documents unsuited to RDF databases. Figure 1. shows
+for the storage of large images and documents unsuited to RDF databases. Figure
+1. shows
 the relationship between components and key data flows.
 
 
@@ -111,7 +120,8 @@ the relationship between components and key data flows.
 \begin{figure}
 \begin{center}
  \includegraphics[width=12cm,keepaspectratio=true]{plantscan-workflow-figure1.png}
- % plantscan-workflow-figure1.png: 598x330 pixel, 72dpi, 21.10x11.64 cm, bb=0 0 598 330
+ % plantscan-workflow-figure1.png: 598x330 pixel, 72dpi, 21.10x11.64 cm, bb=0 0
+598 330
 
 \caption{HRPPC component relationships and data flow}
 \label{hrppccomponents}
@@ -139,7 +149,8 @@ represent common elements across genomics datasets. If these annotations are
 given using recognised URIs, and not as key-value string tuples, various RDF
 documents can be merged automatically based on RDF semantics to discover novel
 conclusions. Initially, different providers were not able to decide on URIs to
-use in Linked Data. This resulted in various third parties such as Bio2RDF \cite{Belleau2008}
+use in Linked Data. This resulted in various third parties such as Bio2RDF
+\cite{Belleau2008}
 creating RDF versions of scientific datasets so that the RDF documents could be
 easily merged based on common URIs. However, recently more providers have given
 authoritative URIs for each object in their dataset, making it easy to integrate
@@ -157,7 +168,8 @@ scientific concepts alongside raw experimental data.
 
 
 The basic PODD project is structured as a tree, which, when used with
-PlantScan\textsuperscript{\texttrademark}, represents the different components of a scientific project as
+PlantScan\textsuperscript{\texttrademark}, represents the different components
+of a scientific project as
 top-level branches. These include a branch for raw data, along with separate
 branches for results, analysis, and publications related to the project. In the
 case of raw data, the semantics are not clear and cannot be defined by the
@@ -198,7 +210,8 @@ in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
 \begin{figure}
 \begin{center}
  \includegraphics[width=12cm,keepaspectratio=true]{podd-ontologies-figure2.png}
- % podd-ontologies-figure2.png: 5097x2360 pixel, 600dpi, 21.58x9.99 cm, bb=0 0 612 283
+ % podd-ontologies-figure2.png: 5097x2360 pixel, 600dpi, 21.58x9.99 cm, bb=0 0
+612 283
 
 \caption{PODD ontology hierarchy}
 \label{poddontologies}
@@ -258,10 +271,11 @@ metabolomics to phenomics information.
 
 \subsection{Heterogeneous data streams}
 
-PlantScan\textsuperscript{\texttrademark} is a medium throughput high resolution phenotyping platform, which
-brings together a number of imaging sensors (Light detection and ranging, Far
-infrared imaging, multi-wavelength imaging) to non-invasively measure plant
-growth and function using in-silico approaches [REF?]. Raw data is captured with
+PlantScan\textsuperscript{\texttrademark} is a medium throughput high resolution
+phenotyping platform, which brings together a number of imaging sensors--light 
+detection and ranging, far-infrared imaging, and multi-wavelength imaging--to non-invasively measure plant growth and function using in-silico approaches.
+% FIXME: TODO: [REF?] for PlantScan. 
+Raw data is captured with
 its contextual information (e.g. system configuration, time of acquisition,
 batch number and project) and is stored in a purpose-built database as the data
 is being generated. The various data streams are collated and used to produce
@@ -279,7 +293,8 @@ Portal. These bags have a permanent address which is recorded into PODD. Any
 additional processes on these digital objects (such as statistical information
 on features like plant colour, volume,  growth etc. and on elements such as
 petiole, stem, leaf) are also captured by PODD (Figure 1). Metadata
-Each acquisition on PlantScan\textsuperscript{\texttrademark} includes metadata (in addition to the raw data
+Each acquisition on PlantScan\textsuperscript{\texttrademark} includes metadata
+(in addition to the raw data
 streams), such as plant genus and species, project and experiment metadata, a
 unique identifier for each image (Globally Unique Identifier), imaging angle,
 environmental temperature of the imaging chamber, location of optical and colour
@@ -292,9 +307,11 @@ the PlantScan\textsuperscript{\texttrademark} database.
 
 
 \subsection{Data volume}
-Digitisation systems such as PlantScan\textsuperscript{\texttrademark} generate huge amounts of data including
+Digitisation systems such as PlantScan\textsuperscript{\texttrademark} generate
+huge amounts of data including
 raw image data, registration metadata, sensor configurations and plant metadata.
-For example, PlantScan\textsuperscript{\texttrademark} generates around 500GB of raw image data, representing
+For example, PlantScan\textsuperscript{\texttrademark} generates around 500GB of
+raw image data, representing
 in excess of 200,000 database records, per day. Sufficient storage space
 (usually at remote locations) and fast network transfer rates were thus
 necessary to facilitate data movement for processing using high performance
@@ -303,12 +320,14 @@ large data sets of images, it was necessary to package the raw information into
 elementary units with permanent addresses which could be retrieved using PODD. 
 The CSIRO Data Access Portal (DAP) \footnote{http://data.csiro.au} and Advanced
 Scientific Computing (ASC) storage and compute facilities
-\footnote{https://wiki.csiro.au/display/ASC} are key resources used by PlantScan\textsuperscript{\texttrademark} to
+\footnote{https://wiki.csiro.au/display/ASC} are key resources used by
+PlantScan\textsuperscript{\texttrademark} to
 process and store bulk data.
 
 
 \section{CSIRO High Performance Compute Infrastructure}
-CSIRO ASC shared facilities [10] are used to process the raw PlantScan\textsuperscript{\texttrademark} data to
+CSIRO ASC shared facilities [10] are used to process the raw
+PlantScan\textsuperscript{\texttrademark} data to
 derive data products (meshes). Raw data and meshes are ``bagged'' and stored in
 the ASC archival system. ASC High Performance Compute (HPC) hosts (systems with
 high processor count and large memory) are taken advantage of to create and
@@ -321,7 +340,8 @@ BagIt is defined by an Internet Engineering Task Force (IETF) document as an
 ``hierarchical file packaging format for storage and transfer of arbitrary
 digital content''[6]. A payload manifest details content and MD5 or SHA hashes
 for content integrity verification. Data file related metadata can be stored in
-pre-defined files as key-value pairs. For PlantScan\textsuperscript{\texttrademark}, file-level metadata
+pre-defined files as key-value pairs. For
+PlantScan\textsuperscript{\texttrademark}, file-level metadata
 includes plant barcodes, batch numbers, and plant type.
 
 
@@ -366,8 +386,10 @@ storage.
 
 
 \subsection{Bag preparation for a DAP collection}
-CSIRO’s HRPPC makes use of DAP to store collections of PlantScan\textsuperscript{\texttrademark} raw images
-and processed mesh data as bags [6]. Raw data from PlantScan\textsuperscript{\texttrademark} local storage
+CSIRO’s HRPPC makes use of DAP to store collections of
+PlantScan\textsuperscript{\texttrademark} raw images
+and processed mesh data as bags [6]. Raw data from
+PlantScan\textsuperscript{\texttrademark} local storage
 (HRPPC-Store) and data processed on HPC hosts are transferred to ASC bulk
 storage where image and mesh files are organised in folders by batch, then
 barcode number, then subfolders for each image file type (e.g. RGB images, IR
@@ -375,7 +397,8 @@ images, LiDAR) and meshes. Bag creation is carried out via an allocated ASC HPC
 job.
 
 
-Currently, one bag is equivalent to a single batch scanned on the PlantScan\textsuperscript{\texttrademark}
+Currently, one bag is equivalent to a single batch scanned on the
+PlantScan\textsuperscript{\texttrademark}
 local software system, which usually means the same kind of plant with different
 genotypes scanned under one  experiment configuration profile.  However the
 naming, content and amount of data in a bag are flexible and depend upon the
@@ -389,7 +412,8 @@ contain the metadata description of the bag just packed.
 
 The metadata required for a DAP publication is created and the bag transferred
 to the DAP staging area via SFTP (SSH File Transfer Protocol). After publication
-of the DAP collection, the data from PlantScan\textsuperscript{\texttrademark} for the given project becomes
+of the DAP collection, the data from PlantScan\textsuperscript{\texttrademark}
+for the given project becomes
 discoverable via DAP. In addition, experiment reports, published papers, and
 sensor configurations can either be made accessible via a DAP collection's
 ``related materials'' links, other metadata fields, or within the collection's
@@ -436,20 +460,23 @@ annotations can still be retrieved using RDFa.
 
 Scientific journals increasingly require the data and provenance for articles to
 be available in a machine readable format. The DOI registrar that DAP uses,
-DataCite \cite{Brase2009}, was setup to provide unique identifiers for data items that can
+DataCite \cite{Brase2009}, was setup to provide unique identifiers for data
+items that can
 be attached to publications, which in turn may have their own DOIs.
 
 
 By providing machine readable descriptions of scientific experiments, including
 semantic references to shared ontologies where possible, PODD enables the output
-from PlantScan\textsuperscript{\texttrademark} to be interpreted and extended by others. The use of PODD URIs
+from PlantScan\textsuperscript{\texttrademark} to be interpreted and extended by
+others. The use of PODD URIs
 in other RDF documents enables scientists to extend the initial work using the
 Linked Data paradigm \cite{BernersLee}.
 
 
 \section{Conclusion}
 This paper described how the Phenomics Ontology Driven Data repository
-integrates with the PlantScan\textsuperscript{\texttrademark} platform and CSIRO Data Access Portal to manage
+integrates with the PlantScan\textsuperscript{\texttrademark} platform and CSIRO
+Data Access Portal to manage
 the complex workflows at the High Resolution Plant Phenomics Centre. This
 workflow keeps track of phenomics data, metadata and experimental processes and
 also provides a secure mechanism to share and publish scientific experiments in
@@ -478,11 +505,13 @@ References
 % Unresolved comments from Google docs:
 %
 % [a]Xavier Sirault:
-% NOTE:Submitted papers should not exceed 15 pages for long papers and 8 pages for
+% NOTE:Submitted papers should not exceed 15 pages for long papers and 8 pages
+for
 % short papers and must be formatted according to the LNCS guidelines. 
 %  
 % Proceedings of the workshop will be published online at CEUR Workshop
-% Proceedings (www.CEUR-WS.org ). The 3 best papers presented at the workshop will
+% Proceedings (www.CEUR-WS.org ). The 3 best papers presented at the workshop
+will
 % be included in the supplementary Springer LNCS (Lecture Notes in Computer
 % Science ) proceedings of the ESWC2013 conference.
 % ________________
@@ -498,8 +527,10 @@ References
 % Xavier Sirault:
 % 136 words
 % [c]David Benn:
-% "DAP" has been removed from the abstract. I know it looms large in the paper but
-% is it worth adding something like "and data collection publication"? I've added
+% "DAP" has been removed from the abstract. I know it looms large in the paper
+but
+% is it worth adding something like "and data collection publication"? I've
+added
 % this in but I understand if it's not okay because we're space challenged.
 % ________________
 % Xavier Sirault:
@@ -520,7 +551,8 @@ References
 % but more the acquisition processes and how it is captured.
 % ________________
 % David Benn:
-% How about something like: "Plant phenomics imaging, processing, metadata capture
+% How about something like: "Plant phenomics imaging, processing, metadata
+capture
 % and publication". Too verbose I know.
 % [e]Xavier Sirault:
 % Jianming, could you please put a 3D model of tobacco with overlaid RGB signal?
@@ -529,11 +561,13 @@ References
 % of the introduction
 % ________________
 % David Benn:
-% Do we want to simply change "Figure 4" to "Figure 1" here, or are you suggesting
+% Do we want to simply change "Figure 4" to "Figure 1" here, or are you
+suggesting
 % we move the diagram?
 % ________________
 % David Benn:
 % Looks like this has been resolved.
 % ________________
 % David Benn:
-% Not sure whether this is all we want to do or to physically move Fig 1 to here.
+% Not sure whether this is all we want to do or to physically move Fig 1 to
+here.
