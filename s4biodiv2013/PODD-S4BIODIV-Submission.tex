@@ -1,5 +1,7 @@
 \documentclass{llncs}
 
+\usepackage{graphicx}
+
 \title{Flexible Scientific Data Management for Plant Phenomics Research}
 
 %Autors: Peter Ansell1, Robert Furbank2, Kutila Gunasekera1, Jianming Guo2, David Benn3, Gareth Williams3, Xavier Sirault2
@@ -107,7 +109,16 @@ the relationship between components and key data flows.
 
 %% FIXME: TODO: Insert Figure 1 here
 
-Figure 1. HRPPC component relationships and data flow
+%%Figure 1. HRPPC component relationships and data flow
+\begin{figure}
+\begin{center}
+ \includegraphics[width=12cm,keepaspectratio=true]{plantscan-workflow-figure1.png}
+ % plantscan-workflow-figure1.png: 598x330 pixel, 72dpi, 21.10x11.64 cm, bb=0 0 598 330
+
+\caption{HRPPC component relationships and data flow}
+\label{hrppccomponents}
+\end{center}
+\end{figure}
 
 
 \section{Phenomics Ontology Driven Data repository}
@@ -183,11 +194,18 @@ the defined properties, without requiring all of the properties to be used.
 The parent object types and properties used by PODD to establish basic ground
 rules for rendering and validation are defined in a small base schema ontology.
 General scientific properties and phenotype specific properties are then defined
-in larger extension ontologies as illustrated in Figure 2.
+in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
 
-%%% FIXME: TODO: Insert Figure 2 here
+%Figure 2. 
+\begin{figure}
+\begin{center}
+ \includegraphics[width=12cm,keepaspectratio=true]{podd-ontologies-figure2.png}
+ % podd-ontologies-figure2.png: 5097x2360 pixel, 600dpi, 21.58x9.99 cm, bb=0 0 612 283
 
-Figure 2. PODD schema ontology hierarchy
+\caption{PODD ontology hierarchy}
+\label{poddontologies}
+\end{center}
+\end{figure}
 
 
 An ontology is a common controlled vocabulary about a particular topic, in this
