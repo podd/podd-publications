@@ -146,16 +146,18 @@ Increasingly however, providers of scientific datasets are focusing on enhancing
 their datasets using curated scientific concepts from ontologies. For example,
 scientists have used the Gene Ontology \cite{Ashburner2000} to link well known concepts to
 represent common elements across genomics datasets, while the Plant Ontology \cite{Avraham2008} 
-allows the description of plant based datasets. If these annotations are
-given using recognised URIs, and not as key-value string tuples, various RDF
-documents can be merged automatically based on RDF semantics to discover novel
-conclusions. Initially, different providers were not able to decide on URIs to
-use in Linked Data. This resulted in various third parties such as Bio2RDF
-\cite{Belleau2008}
-creating RDF versions of scientific datasets so that the RDF documents could be
-easily merged based on common URIs. However, recently more providers have given
-authoritative URIs for each object in their dataset, making it easy to integrate
-data from various locations.
+allows the description of plant based datasets. 
+% If these annotations are
+% given using recognised URIs, and not as key-value string tuples, various RDF
+% documents can be merged automatically based on RDF semantics to discover novel
+% conclusions. 
+% Initially, different providers were not able to decide on URIs to
+% use in Linked Data. This resulted in various third parties such as Bio2RDF
+% \cite{Belleau2008}
+% creating RDF versions of scientific datasets so that the RDF documents could be
+% easily merged based on common URIs. However, recently more providers have given
+% authoritative URIs for each object in their dataset, making it easy to integrate
+% data from various locations.
 
 
 \subsection{Redesign of the Phenomics Ontology Driven Data repository}
@@ -168,9 +170,9 @@ for PODD to allow scientists to continue to maintain projects containing curated
 scientific concepts alongside raw experimental data. The PODD repository was 
 redesigned based on an evaluation of the original software \cite{Li2010} that 
 found it was not able to scale sufficiently well to suit the HRPPC needs. The 
-major differences to the old software is that projects are no longer the only 
-supported top object type, and projects are not stored in multiple parts, as 
-that approach was not able to scale as was originally hypothesised.
+major differences to the software implemented by \cite{Li2010} is that projects 
+are no longer the only supported top object type, and projects are not stored 
+in multiple parts, as that approach was not able to scale as was originally hypothesised.
 
 
 The basic PODD project is structured as a tree, which, when used with
@@ -179,10 +181,11 @@ of a scientific project as
 top-level branches. These include a branch for raw data, along with separate
 branches for results, analysis, and publications related to the project. In the
 case of raw data, the semantics are not clear and cannot be defined by the
-platforms collecting the data. Scientists are able to sparsely attach meaning
-using horizontal links between different branches, using the OWL Open World
-Assumption to allow extra semantic annotations to be attached in future. For
-example, they may annotate images of a plant with a trait in only one case,
+platforms collecting the data. 
+% Scientists are able to sparsely attach meaning
+% using horizontal links between different branches, using the OWL Open World
+% Assumption to allow extra semantic annotations to be attached in future. 
+For example, they may annotate images of a plant with a trait in only one case,
 without annotating other images. These horizontal links are not constrained by
 the basic scientific project structure, so they are able to entail novel
 meanings independent of the ontology, including untested hypotheses, process
@@ -205,11 +208,9 @@ pages and provide HTML based editing facilities. For example, any OWL object
 property that has been defined to link from image acquisition runs to images can
 be used to define the purpose of an image. This may include any combination of
 the defined properties, without requiring all of the properties to be used.
-
-
-The parent object types and properties used by PODD to establish basic ground
-rules for rendering and validation are defined in a small base schema ontology.
-General scientific properties and phenotype specific properties are then defined
+% The parent object types and properties used by PODD to establish basic ground
+% rules for rendering and validation are defined in a small base schema ontology.
+General scientific properties and phenotype specific properties are defined
 in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
 
 %Figure 2. 
