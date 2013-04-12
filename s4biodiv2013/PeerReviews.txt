@@ -1,0 +1,93 @@
+ 
+----------------------- REVIEW 1 ---------------------
+PAPER: 1
+TITLE: Flexible Scientific Data Management for Plant Phenomics Research
+AUTHORS: Peter Ansell, Robert Furbank, Kutila Gunasekera, Jianming Guo, David Benn, Gareth Williams and Xavier Sirault
+
+OVERALL EVALUATION: 3 (strong accept)
+REVIEWER'S CONFIDENCE: 5 (expert)
+What is your expertise level for the paper?: 5 (excellent) For this paper do you suggest a long presentation (20 min) ?: 1 (yes) For this paper do you suggest a flashtalk (5 min) ?: 3 (maybe) Is this paper follows LNCS guideline?: 1 (yes) Would you consider the paper to submit an extended paper for publication in a journal?: 3 (maybe) Do you think the paper will open or drive a fruitful discussion during the workshop?: 1 (yes) APPROPRIATENESS for the workshop : from 1 (lowest) to 5 (highest): 5 (excellent)
+ORIGINALITY: from 1 (lowest) to 5 (highest): 5 (excellent) TECHNICAL CORRECTNESS: from 1 (lowest) to 5 (highest): 5 (excellent)
+
+----------- REVIEW -----------
+This paper demonstrate several inovative application of ontologies in Phenomic like : (i) ontology driven data store, (ii) data consistency check, (iii) relation between multiple references ontologies.
+
+For more than ten years, storage and archiving biological data was achieved by first designing a data model representing what was to be stored and then implementing it, generaly in a database. In this paper, we find those two steps but with two major improvment. First, being based on an ontology, the data model is richer that what can be commonly achieved with traditional UML/Database modeling. Secondly, the implementation is not purely based on a database but relies on semantic web technologies like OWL, and are thus very likely to fully preserve the semantic richness of the model.
+Furthermore, this datastore is designed for Big Data, and it is of very high interesst to see how ontologies scales and what solutions can be implemented for high volumes of data.
+
+The ontologies are also used for a two level consistency check. There is a core set of rule to ensure the integrability of the data in the system, but it seems to allow the neccessary level of flexibility to ensure data quality without restricting data submission and dataset elaboration.
+Furthermore, PODD allows to use several reference ontologies thus easing data interoperability.
+
+This paper shows extensive use of semantic web technologies applied to an important biological field, Phenomics applied to the study of phenotype, genotype and environment relationship in plants. For me, it is therefore perfectly in the scope of S4BioDiv.
+
+It is a very original work, as there no or little phenomic datastore curently relying on ontologies like PODD. Furthermore, it is based on recognized technologies like OWL, RDF and implemented with recognized frameworks like BagIt (cited in the paper) or Hibernate ORM (used in source code). This indicate an excelent technical correcteness.
+
+The experience of PODD is very interresting for every group managing an information system, and this talk should lead to long and fruitfull discussions.
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 1
+TITLE: Flexible Scientific Data Management for Plant Phenomics Research
+AUTHORS: Peter Ansell, Robert Furbank, Kutila Gunasekera, Jianming Guo, David Benn, Gareth Williams and Xavier Sirault
+
+OVERALL EVALUATION: -1 (weak reject)
+REVIEWER'S CONFIDENCE: 3 (medium)
+What is your expertise level for the paper?: 2 (poor) For this paper do you suggest a long presentation (20 min) ?: 2 (no) For this paper do you suggest a flashtalk (5 min) ?: 2 (no) Is this paper follows LNCS guideline?: 1 (yes) Would you consider the paper to submit an extended paper for publication in a journal?: 2 (no) Do you think the paper will open or drive a fruitful discussion during the workshop?: 2 (no) APPROPRIATENESS for the workshop : from 1 (lowest) to 5 (highest): 1 (very poor)
+ORIGINALITY: from 1 (lowest) to 5 (highest): 4 (good) TECHNICAL CORRECTNESS: from 1 (lowest) to 5 (highest): 3 (fair)
+
+----------- REVIEW -----------
+The authors describe PODD - an ontology-driven repository to contain data coming from a high-throughput plant phenotyping information.
+
+Though I have few criticisms of the paper itself (and I will raise those in a moment), my main concern is that the authors don't describe how this system is "for biodiversity", and moreover, there is also only passing reference to the semantics of their system in the manuscript.  The majority of the manuscript was spent describing neither semantics, nor biodiversity.  As such, while the manuscript itself is, in principle, high-quality, it would need to be significantly re-written to be appropriate for this venue.  In an attempt to give the manuscript a more fair review, I attempted to find the connection for myself.  A Google search for HRPPC + biodiversity found several mentions of how the output from the center might be used for biodiversity, but these were extremely generic statements and there didn't appear to be any active project in biodiversity (and if there is, the authors need to describe this in the manuscript).  The use of semantics, as described, is difficult to !
+ follow.  I understand that they use concepts from, e.g. the Plant Ontology, to annotate their datasets, but that in itself is fairly common and isn't really a publishable achievement.  There is a difficult-to-understand description of the use of OWL as a "rules language", but no clear explanation of why one would use a Description Logic in this way, as opposed to using... for example... a Rules Language.  As such, the "semantic" aspect of the manuscript isn't particularly compelling either.  The authors didn't discuss if/how semantics is used in their capture and representation of metadata.  The final aspect where semantics was discussed was with respect to "semantic publishing", and that section of the manuscript also wasn't clear.  Presumably by "semantic publishing" the authors mean that it is possible to retrieve fragments of RDF that describe the datasets and their ontology-grounded annotations, but again, this (in and of itself) isn't particularly novel, and the use o!
+ f these PODD URIs by other scientists to extend the initial work seems to be the very definition of Linked Data.  I would have been far more supportive of the manuscript if it had described some of their models; explained how the models take advantage of other ontologies (and which); explained which aspects of the data they semantically annotate, why, and how successfully; and how this relates to biodiversity.
+
+The manuscript also feels like it was written by someone extremely familiar with the system, as it uses phraseology that likely only has meaning to them.  For example "External ontologies must currently be mapped into the PODD system to define the expected status of the classes and properties with respect to the basic PODD concepts" - I have read that sentence multiple times and still cannot decypher what it means to "define the expected status of the classes and properties", or what the authors mean by "mapping" external ontologies "into" the PODD system.  Other examples of this include:
+
+"allow scientists to generate datasets before they were certain about the semantic meaning of their work" - what does that mean?
+
+Most of the paragraph beginning "The basic PODD project...", with statements like "annotate images of a plant with a trait in only one case, without annotating other images" and "these horizontal links are not constrained by the basic scientific project structure" (what horizontal links are you referring to, and what are "horizontal links"?)
+
+"any OWL object property that has been defined to link from image acquisition runs to images can be used to define the purpose of an image" - are you saying that images are properties of image acquisition runs?  and that the link between an image acquisition process, and its resulting image, defines the purpose of the image?  How so??
+
+Overall, I thought the manuscript was unnecessarily opaque, didn't emphasise the primary themes of "biodiversity" and "semantics", and over-emphasised many other aspects of their phenotype acquisition and processing workflow.  It's not a bad manuscript, at all, and is likely very well-suited for submission elsewhere (if made slighly less "jargony")!  However, I don't see the fit with this meeting, unless it is extensively re-written.
+
+Best wishes to all the authors!
+
+*Reviewer Name Redacted*
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 1
+TITLE: Flexible Scientific Data Management for Plant Phenomics Research
+AUTHORS: Peter Ansell, Robert Furbank, Kutila Gunasekera, Jianming Guo, David Benn, Gareth Williams and Xavier Sirault
+
+OVERALL EVALUATION: 2 (accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+What is your expertise level for the paper?: 4 (good) For this paper do you suggest a long presentation (20 min) ?: 1 (yes) For this paper do you suggest a flashtalk (5 min) ?: 3 (maybe) Is this paper follows LNCS guideline?: 1 (yes) Would you consider the paper to submit an extended paper for publication in a journal?: 1 (yes) Do you think the paper will open or drive a fruitful discussion during the workshop?: 1 (yes) APPROPRIATENESS for the workshop : from 1 (lowest) to 5 (highest): 4 (good)
+ORIGINALITY: from 1 (lowest) to 5 (highest): 4 (good) TECHNICAL CORRECTNESS: from 1 (lowest) to 5 (highest): 5 (excellent)
+
+----------- REVIEW -----------
+This paper provides an overall view of the Plant Ontology Driven Data repository architecture building to support the High-throughput data generated at the High Resolution Plant Phenomics Centre (Camberra, Australia).
+Authors clearly answer major issues of plant Phenomics research applied to the study of phenotype, genotype and environment relationship by providing a flexible and scalable architecture. Moreover the paper shows extensive use of semantic web technologies applied to this field of research. This paper falls completely in the scope of the workshop.
+
+The main contribution of PODD is an OWL ontology which both structure the database model and  check consistency for data. Authors address skillfully the issue of data storage by using robust technologies (e.g. BagIt).
+
+Minor Comment:
+
+I wish appreciate that Authors provide a state of the art for ontology-driven architectures (e.g. iPlant collaborative) and how PODD is distinguised itself from the others.
+
+
+----------------------- REVIEW 4 ---------------------
+PAPER: 1
+TITLE: Flexible Scientific Data Management for Plant Phenomics Research
+AUTHORS: Peter Ansell, Robert Furbank, Kutila Gunasekera, Jianming Guo, David Benn, Gareth Williams and Xavier Sirault
+
+OVERALL EVALUATION: 2 (accept)
+REVIEWER'S CONFIDENCE: 3 (medium)
+What is your expertise level for the paper?: 4 (good) For this paper do you suggest a long presentation (20 min) ?: 1 (yes) For this paper do you suggest a flashtalk (5 min) ?: 3 (maybe) Is this paper follows LNCS guideline?: 1 (yes) Would you consider the paper to submit an extended paper for publication in a journal?: 3 (maybe) Do you think the paper will open or drive a fruitful discussion during the workshop?: 1 (yes) APPROPRIATENESS for the workshop : from 1 (lowest) to 5 (highest): 4 (good)
+ORIGINALITY: from 1 (lowest) to 5 (highest): 4 (good) TECHNICAL CORRECTNESS: from 1 (lowest) to 5 (highest): 4 (good)
+
+----------- REVIEW -----------
+The authors present an intersting approach dedicated to high throughput phenotyping data.
+This paper mainly focuses on PODD (Phenomics Ontology Driven Data) properties and the data workflow management. In my opinion, the gap between this paper and state of the art on workflow aspects could be a little more detailled. Overall, the paper is well presented and I believe this work will be relevant for the workshop.
