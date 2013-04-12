@@ -168,43 +168,49 @@ are no longer the only supported top object type, and projects are not stored
 in multiple parts, as that approach was not able to scale as was originally hypothesised.
 
 
-The basic PODD project is structured as a tree, which, when used with
-PlantScan\textsuperscript{\texttrademark}, represents the different components
-of a scientific project as
-top-level branches. These include a branch for raw data, along with separate
+In the case of PlantScan\textsuperscript{\texttrademark} a PODD project contains top level branches describing the 
+various parts of a scientific project. These include a branch for raw data, along with separate
 branches for results, analysis, and publications related to the project. In the
-case of raw data, the semantics are not clear and cannot be defined by the
-platforms collecting the data. 
+case of raw data, the semantics are not necessarily clear and are not easily defined by the
+automated platforms collecting the data. 
 % Scientists are able to sparsely attach meaning
 % using horizontal links between different branches, using the OWL Open World
 % Assumption to allow extra semantic annotations to be attached in future. 
-For example, they may annotate images of a plant with a trait in only one case,
-without annotating other images. These horizontal links are not constrained by
-the basic scientific project structure, so they are able to entail novel
-meanings independent of the ontology, including untested hypotheses, process
-annotations and meaningful scientific results.
-
+The scientist may then semantically link the data with results, conclusions, and external ontologies.
+For example, a scientist may annotate the data objects representing images of a plant with a trait 
+that is defined in an external community ontology. They may also annotate the image with a link 
+to a trait that is defined inside of the project, particularly in cases where the trait is novel 
+and not represented in a community ontology.
+%These horizontal links are not constrained by
+%the basic scientific project structure, so they are able to entail novel
+%meanings independent of the ontology, including untested hypotheses, process
+%annotations and meaningful scientific results.
 
 \subsection{Semantic validation}
-PODD validates experiments using independently configurable rules based on OWL
-(Web Ontology Language) schemas. Although PODD currently only supports OWL as a
-rules language, it could be easily extended in other cases to use different
+PODD validates scientific project descriptions using independently configurable constraints based on OWL
+(Web Ontology Language) ontologies. Although PODD currently solely supports OWL for 
+constraint verification, it could be easily extended in other cases to use different
 systems such as N3, RDFS, SPARQL, or SPIN as rules languages \cite{Fuerber2010}. 
 
 
 OWL is used to determine whether projects are both internally consistent, with
 all objects having an explicit RDF type, and whether they are consistent with
-the ontologies that they import. The main point that PODD focuses on for
-validation is determining that mappings are consistent with the basic PODD
-predicates and classes, so that they can be used to render both static HTML
-pages and provide HTML based editing facilities. For example, any OWL object
+the ontologies that they import. 
+%The main point that PODD focuses on for
+%validation is determining that mappings are consistent with the basic PODD
+%predicates and classes, so that they can be used to render both static HTML
+%pages and provide HTML based editing facilities. 
+For example, any OWL object
 property that has been defined to link from image acquisition runs to images can
 be used to define the purpose of an image. This may include any combination of
 the defined properties, without requiring all of the properties to be used.
 % The parent object types and properties used by PODD to establish basic ground
 % rules for rendering and validation are defined in a small base schema ontology.
 General scientific properties and phenotype specific properties are defined
-in larger extension ontologies as illustrated in Figure~\ref{poddontologies}.
+in optional extension ontologies as illustrated in Figure~\ref{poddontologies}.
+These are used by scientists to annotate their projects with concepts specific 
+to their field, without requiring other scientists using the system to use phenotype 
+properties to annotate their projects.
 
 %Figure 2. 
 \begin{figure}

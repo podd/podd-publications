@@ -75,7 +75,9 @@ The use of semantics, as described, is difficult to !
  
  *****
  
- Rebuttal: Section 2.2 and 2.3 have been updated to include clarifications of the relationship between the (metadata) semantics of the project structure, and the (science) semantics of the links between data, descriptions of processes, results, and conclusions. The project structure semantics are heavily constrained, while the science semantics are less strictly constrained. The science semantics do not attempt to generate high quality upper ontologies, rather they attempt to represent the scientists intentions in a slightly more structured way than otherwise would be possible.
+ Rebuttal: Section 2.2 and 2.3 have been updated to include clarifications of the relationship between the (metadata) semantics of the project structure, and the (science) semantics of the links between data, descriptions of processes, results, and conclusions. The project structure semantics are heavily constrained, while the science semantics are less strictly constrained. The science semantics do not set out to generate high quality upper ontologies, rather they attempt to represent the scientists intentions in a slightly more structured way than otherwise would be possible.
+ 
+ The capture and representation of metadata is highly platform specific, and while the current reference platform, PlantScan, does not generate scientific semantic metadata, other platforms are free to add semantics to metadata without being biased against their use of metadata semantics.
  
  *****
  
@@ -84,21 +86,55 @@ The use of semantics, as described, is difficult to !
  
  *****
  
- 
+ Rebuttal: Unfortunately the use of semantic metadata in scientific publications is very limited in practice. Section 6 merely aims to give a quick description of how PODD enables the long-term stability of projects so they can be used as references in static peer reviewed publications, while ontologies are simultaneously updated for use in other projects. This enables scientists to have more control than a raw Linked Data platform where there are no guarantees relating to the stability of the system in general. 
  
  *****
  
  I would have been far more supportive of the manuscript if it had described some of their models; explained how the models take advantage of other ontologies (and which); explained which aspects of the data they semantically annotate, why, and how successfully; and how this relates to biodiversity.
 
+ *****
+ 
+ Rebuttal: There are no measures for the successful use of external ontologies, as the definitions of external ontologies are always in part defined by the community based on both discussions and based on the way they are used. The set of ontologies that are currently in use is described in Figure 2.
+ 
+ *****
+ 
 The manuscript also feels like it was written by someone extremely familiar with the system, as it uses phraseology that likely only has meaning to them.  For example "External ontologies must currently be mapped into the PODD system to define the expected status of the classes and properties with respect to the basic PODD concepts" - I have read that sentence multiple times and still cannot decypher what it means to "define the expected status of the classes and properties", or what the authors mean by "mapping" external ontologies "into" the PODD system.  Other examples of this include:
 
 "allow scientists to generate datasets before they were certain about the semantic meaning of their work" - what does that mean?
 
+ *****
+ 
+ Rebuttal : TODO: Fix this
+ 
+ *****
+
 Most of the paragraph beginning "The basic PODD project...", with statements like "annotate images of a plant with a trait in only one case, without annotating other images" and "these horizontal links are not constrained by the basic scientific project structure" (what horizontal links are you referring to, and what are "horizontal links"?)
+
+ *****
+ 
+ Rebuttal : TODO: Fix this
+ 
+ *****
 
 "any OWL object property that has been defined to link from image acquisition runs to images can be used to define the purpose of an image" - are you saying that images are properties of image acquisition runs?  and that the link between an image acquisition process, and its resulting image, defines the purpose of the image?  How so??
 
+ *****
+ 
+ Rebuttal : TODO: Fix this
+ 
+ *****
+
 Overall, I thought the manuscript was unnecessarily opaque, didn't emphasise the primary themes of "biodiversity" and "semantics", and over-emphasised many other aspects of their phenotype acquisition and processing workflow.  It's not a bad manuscript, at all, and is likely very well-suited for submission elsewhere (if made slighly less "jargony")!  However, I don't see the fit with this meeting, unless it is extensively re-written.
+
+ *****
+ 
+ Rebuttal : We feel that the reviewer did not recognise the attempt to provide a high level view of the integrated PODD and PlantScan system and how it is being used by HRPPC. 
+ 
+ The reviewer requests that the manuscript use less jargon, but also detail more specifically what ontologies are in use and how they are being practically used.
+ 
+ We broadly agree with the comments and have made changes to clarify various points.
+ 
+ *****
 
 Best wishes to all the authors!
 
@@ -125,6 +161,11 @@ Minor Comment:
 
 I wish appreciate that Authors provide a state of the art for ontology-driven architectures (e.g. iPlant collaborative) and how PODD is distinguised itself from the others.
 
+ *****
+ 
+ Rebuttal : TODO: Fix this
+ 
+ *****
 
 ----------------------- REVIEW 4 ---------------------
 PAPER: 1
