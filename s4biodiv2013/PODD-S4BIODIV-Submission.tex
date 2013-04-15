@@ -157,16 +157,16 @@ allows the description of plant based datasets.
 The PODD repository relies on semantic web technologies to
 manage phenomics data and metadata. Although both ontologies and mappings are
 essential, in PODD it was necessary to build the system with a relaxed
-ontological vocabulary to allow scientists to generate datasets before they were
-certain about the semantic meaning of their work. In addition, it was necessary
-for PODD to allow scientists to continue to maintain projects containing curated
+ontological vocabulary. This enables scientists to sparsely populate their datasets 
+and sparsely link to community defined upper ontologies as necessary. This 
+allows scientists to continue to maintain projects containing curated
 scientific concepts alongside raw experimental data. The PODD repository was 
 redesigned based on an evaluation of the original software \cite{Li2010} that 
-found it was not able to scale sufficiently to suit the HRPPC needs. The 
-major differences to the software implemented by \cite{Li2010} are that projects 
-are no longer the only supported top object type, and projects are not stored 
-in multiple parts, as that approach was not able to scale as was originally hypothesised.
-
+found it was not able to scale sufficiently to suit the HRPPC needs due to design 
+and implementation deficiencies. The major differences to the software implemented 
+by \cite{Li2010} are that projects are no longer the only supported top object type, 
+and projects are not stored in multiple parts, as that approach was not able to 
+scale as was originally hypothesised.
 
 In the case of PlantScan\textsuperscript{\texttrademark} a PODD project contains top level branches describing the 
 various parts of a scientific project. These include a branch for raw data, along with separate

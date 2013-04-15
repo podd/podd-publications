@@ -104,7 +104,7 @@ The manuscript also feels like it was written by someone extremely familiar with
 
  *****
  
- Rebuttal : Rewrote Section 5 Paragraph 2 to include an example of mapping the Crop Ontology into PODD.
+ Rebuttal : Rewrote Section 5 Paragraph 2 to include an example of mapping the Crop Ontology into PODD. Rewrote Section 2.2 Paragraph 1 to clarify that scientists are able to sparsely populate PODD projects with links to community defined upper ontologies.
  
  *****
 
