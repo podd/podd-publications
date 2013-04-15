@@ -120,7 +120,7 @@ Most of the paragraph beginning "The basic PODD project...", with statements lik
 
  *****
  
- Rebuttal : TODO: Fix this
+ Rebuttal : Rewrote this sentence so it refers to provenance, not properties.
  
  *****
 
@@ -130,7 +130,7 @@ Overall, I thought the manuscript was unnecessarily opaque, didn't emphasise the
  
  Rebuttal : We feel that the reviewer did not recognise the attempt to provide a high level view of the integrated PODD and PlantScan system and how it is being used by HRPPC to process plant phenomics data (Section 2). Plant phenomics is a legitimate subset of biodiversity. It highlights differences between, and inside, multiple plant species based on feature comparisons. This paper provides a description of the high level use of ontologies to structure and enrich a semantic data model based on RDF and OWL. OWL is used in PODD for both syntactic validation and sparse semantic enrichment purposes.
  
- The reviewer requests that the manuscript use less jargon, but also detail more specifically what ontologies are in use and how they are being practically used, which entails using more jargon related to those specific ontologies.
+ The reviewer requests that the manuscript use less jargon, while also requiring more detail about what ontologies are in use (See Figure and how they are being practically used, which entails using more jargon related to those specific ontologies.
  
  We broadly agree with the comments and have made changes to clarify various points.
  
