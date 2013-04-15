@@ -94,7 +94,7 @@ The use of semantics, as described, is difficult to !
 
  *****
  
- Rebuttal: There are no measures for the successful use of external ontologies, as the definitions of external ontologies are always in part defined by the community based on both discussions and based on the way they are used. The set of ontologies that are currently in use is described in Figure 2.
+ Rebuttal: There are no measures to define the successful use of external ontologies, as the definitions of external ontologies are always in part defined by the community based on both discussions and based on the way they are used. The set of ontologies that are currently in use is described in Figure 2.
  
  *****
  
@@ -104,7 +104,7 @@ The manuscript also feels like it was written by someone extremely familiar with
 
  *****
  
- Rebuttal : TODO: Fix this
+ Rebuttal : Rewrote Section 5 Paragraph 2 to include an example of mapping the Crop Ontology into PODD.
  
  *****
 

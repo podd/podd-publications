@@ -450,13 +450,20 @@ based on well known concepts in phenomics ontologies.
 % could be added in a new version of the PODD ontology while maintaining backwards
 % compatibility with previous experiments that may be published or immutable.
 
+Subsets of phenomics ontologies such as the Plant Ontology and the Crop Ontology 
+were mapped into PODD by adding OWL constraints. These constraints enable PODD to
+verify that the use of classes and properties from these ontologies was consistent 
+with the PODD ontology. For example, the Crop Ontology contains a class defining 
+soil as ``Sandy Loam'', giving it the identifier ``0000104''. This was mapped into 
+PODD to define a particular soil sample as being Sandy Loam using the triple:
+$poddSampleSandyLoamSoil\ a\ cropOntology:\_0000104 .$
 
-External ontologies must currently be mapped into the PODD system to define the
-expected status of the classes and properties with respect to the basic PODD
-concepts. The basic concepts are used to both verify that each PODD project has
-a single valid tree structure, and render HTML pages for both browsing and
-editing. PODD also supports an RDF-based HTTP REST interface that clients may
-use to fetch and update objects.
+%External ontologies must currently be mapped into the PODD system to define the
+%expected status of the classes and properties with respect to the basic PODD
+%concepts. The basic concepts are used to both verify that each PODD project has
+%a single valid tree structure, and render HTML pages for both browsing and
+%editing. PODD also supports an RDF-based HTTP REST interface that clients may
+%use to fetch and update objects.
 % without using the HTML pages.
 
 
