@@ -18,7 +18,7 @@
    height="100%"
    sodipodi:docname="podd-workflow-figure1.svg"
    style="fill:none;stroke:none"
-   inkscape:export-filename="/home/peter/gitrepos/podd-publications/s4biodiv2013/podd-ontologies-figure2.png"
+   inkscape:export-filename="/Users/karina/Documents/gitrepos/podd-publications/s4biodiv2013/podd-workflow-figure1.png"
    inkscape:export-xdpi="1200"
    inkscape:export-ydpi="1200">
   <sodipodi:namedview
@@ -61,7 +61,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -801,7 +801,7 @@
            y="297.0137"
            style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
          id="flowPara3057-8-3"
-         style="font-size:16px;text-align:center;text-anchor:middle">Data Acces Portal</flowPara><flowPara
+         style="font-size:16px;text-align:center;text-anchor:middle">Data Access Portal</flowPara><flowPara
          style="font-size:16px;text-align:center;text-anchor:middle"
          id="flowPara6090">collection</flowPara><flowPara
          style="font-size:16px;text-align:center;text-anchor:middle"
