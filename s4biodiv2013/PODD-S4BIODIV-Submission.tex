@@ -163,12 +163,12 @@ allows scientists to continue to maintain projects containing curated
 scientific concepts alongside raw experimental data. The PODD repository was 
 redesigned based on an evaluation of the original software \cite{Li2010} that 
 found it was not able to scale sufficiently to suit the HRPPC needs due to design 
-and implementation deficiencies. The major differences to the software implemented 
+and implementation deficiencies. The major design differences to the software implemented 
 by \cite{Li2010} are that projects are no longer the only supported top object type, 
 and projects are not stored in multiple parts, as that approach was not able to 
 scale as was originally hypothesised.
 
-In the case of PlantScan\textsuperscript{\texttrademark} a PODD project contains top level branches describing the 
+A PODD project in PlantScan\textsuperscript{\texttrademark} contains top level branches describing the 
 various parts of a scientific project. These include a branch for raw data, along with separate
 branches for results, analysis, and publications related to the project. In the
 case of raw data, the semantics are not necessarily clear and are not easily defined by the
@@ -176,10 +176,10 @@ automated platforms collecting the data.
 % Scientists are able to sparsely attach meaning
 % using horizontal links between different branches, using the OWL Open World
 % Assumption to allow extra semantic annotations to be attached in future. 
-The scientist may then semantically link the data with results, conclusions, and external ontologies.
-For example, a scientist may annotate the data objects representing images of a plant with a trait 
-that is defined in an external community ontology. They may also annotate the image with a link 
-to a trait that is defined inside of the project, particularly in cases where the trait is novel 
+The scientist may later semantically link the data with results, conclusions, and external ontologies.
+For example, a scientist may annotate the data objects representing images of a plant with a link to a trait 
+that is defined in the Plant Ontology. They may also annotate the image with a link 
+to a trait that is defined inside of the project, such as when the trait is novel 
 and not represented in a community ontology.
 %These horizontal links are not constrained by
 %the basic scientific project structure, so they are able to entail novel

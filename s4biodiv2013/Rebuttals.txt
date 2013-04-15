@@ -112,7 +112,7 @@ Most of the paragraph beginning "The basic PODD project...", with statements lik
 
  *****
  
- Rebuttal : TODO: Fix this
+ Rebuttal : Rewrote Section 2.2 Paragraph 2 to remove reference to horizontal links. The sparse linking explanation is given in Section 2.2 Paragraph 1.
  
  *****
 
