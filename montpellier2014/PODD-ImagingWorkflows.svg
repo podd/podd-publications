@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448"
+   height="1500"
+   id="svg5222"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="PODD-ImagingWorkflows.svg"
+   inkscape:export-filename="/home/ans025/gitrepos/podd-publications/montpellier2014/PODD-ImagingWorkflows.png"
+   inkscape:export-xdpi="599.96851"
+   inkscape:export-ydpi="599.96851">
+  <defs
+     id="defs5224">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         id="path4054"
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="90.513914"
+     inkscape:cy="890.62671"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5227">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,447.63782)">
+    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5230"
+       width="258.57144"
+       height="132.85715"
+       x="88"
+       y="-349.63782"
+       ry="25.253813" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5232"
+       width="275.71429"
+       height="135.71428"
+       x="398"
+       y="-349.63782"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5234"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(42.285714,-399.14286)"><flowRegion
+         id="flowRegion5236"><rect
+           id="rect5238"
+           width="227.14285"
+           height="102.85714"
+           x="58.57143"
+           y="66.647896"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5240">SQL Databases</flowPara></flowRoot>    <flowRoot
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot5242"
+       xml:space="preserve"
+       transform="translate(362.28571,-399.14286)"><flowRegion
+         id="flowRegion5244"><rect
+           style="text-align:center;text-anchor:middle"
+           y="66.647896"
+           x="58.57143"
+           height="102.85714"
+           width="227.14285"
+           id="rect5246" /></flowRegion><flowPara
+         id="flowPara5248">File System</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5250"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(12,-442)"><flowRegion
+         id="flowRegion5252"><rect
+           id="rect5254"
+           width="448.57144"
+           height="51.42857"
+           x="177.14285"
+           y="26.647896" /></flowRegion><flowPara
+         id="flowPara5256">Imaging platforms</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5258"
+       width="698.57141"
+       height="267.14285"
+       x="28.857143"
+       y="-432.49496"
+       ry="25.253813" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5260"
+       width="175.71429"
+       height="134.28572"
+       x="60.285713"
+       y="-119.63782"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5264"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-6.8571426,-444.85714)"><flowRegion
+         id="flowRegion5266"><rect
+           id="rect5268"
+           width="165.71429"
+           height="108.57141"
+           x="72.85714"
+           y="338.07648"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5270">Custom client</flowPara></flowRoot>    <rect
+       ry="25.253813"
+       y="-119.63782"
+       x="256.28571"
+       height="134.28572"
+       width="175.71429"
+       id="rect5272"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <flowRoot
+       transform="translate(189.14286,-444.85714)"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot5274"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5276"><rect
+           style="text-align:center;text-anchor:middle"
+           y="338.07648"
+           x="72.85714"
+           height="108.57141"
+           width="165.71429"
+           id="rect5278" /></flowRegion><flowPara
+         id="flowPara5280">Custom client</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5282"
+       width="175.71429"
+       height="134.28572"
+       x="476.28571"
+       y="-119.63782"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5284"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(409.14286,-444.85714)"><flowRegion
+         id="flowRegion5286"><rect
+           id="rect5288"
+           width="165.71429"
+           height="108.57141"
+           x="72.85714"
+           y="338.07648"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5290">Custom client</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 141.71429,-196.78067 0,92.85714"
+       id="path5294"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path5988"
+       d="m 341.71429,-196.78067 0,92.85714"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 561.71429,-196.78067 0,92.85714"
+       id="path5990"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect5992"
+       width="248.57143"
+       height="124.28571"
+       x="64.571426"
+       y="108.93365"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5994"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-4,-386.28571)"><flowRegion
+         id="flowRegion5996"><rect
+           id="rect5998"
+           width="224.28572"
+           height="101.42857"
+           x="81.428574"
+           y="493.79074"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6000">SPARQL Query</flowPara></flowRoot>    <rect
+       ry="25.253813"
+       y="107.50507"
+       x="374.57144"
+       height="124.28571"
+       width="248.57143"
+       id="rect6002"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <flowRoot
+       transform="translate(306,-383.42857)"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot6004"
+       xml:space="preserve"><flowRegion
+         id="flowRegion6006"><rect
+           style="text-align:center;text-anchor:middle"
+           y="493.79074"
+           x="81.428574"
+           height="101.42857"
+           width="224.28572"
+           id="rect6008" /></flowRegion><flowPara
+         id="flowPara6010">RDF Update</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6012"
+       width="654.28571"
+       height="202.85715"
+       x="30.285717"
+       y="44.647919"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6016"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-82.571429,-450.57143)"><flowRegion
+         id="flowRegion6018"><rect
+           id="rect6020"
+           width="522.85724"
+           height="51.428596"
+           x="192.85715"
+           y="496.64789" /></flowRegion><flowPara
+         id="flowPara6022">PODD HTTP Web Services</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 144.57143,-5.3521 8.57143,54.28571"
+       id="path6024"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 343.14286,-1.06639 0,54.28572"
+       id="path6312"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 563.14286,-3.92353 546,51.79075"
+       id="path6498"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6682"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion6684"><rect
+           id="rect6686"
+           width="620"
+           height="101.42857"
+           x="41.42857"
+           y="706.64789" /></flowRegion><flowPara
+         id="flowPara6688"></flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6690"
+       width="658.57141"
+       height="482.85712"
+       x="43.142857"
+       y="273.21936"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6692"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(46,-446.28571)"><flowRegion
+         id="flowRegion6694"><rect
+           id="rect6696"
+           width="475.71429"
+           height="57.142841"
+           x="92.85714"
+           y="729.50507" /></flowRegion><flowPara
+         id="flowPara6698">Sesame Repository API</flowPara></flowRoot>    <rect
+       ry="25.253813"
+       y="586.07648"
+       x="80.85714"
+       height="132.85715"
+       width="258.57144"
+       id="rect6700"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <rect
+       ry="25.253813"
+       y="510.36218"
+       x="386.57144"
+       height="211.42857"
+       width="279.99997"
+       id="rect6702"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <flowRoot
+       transform="translate(13.714286,522.28572)"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       id="flowRoot6704"
+       xml:space="preserve"><flowRegion
+         id="flowRegion6706"><rect
+           style="text-align:center;text-anchor:middle"
+           y="66.647896"
+           x="58.57143"
+           height="150"
+           width="290"
+           id="rect6708" /></flowRegion><flowPara
+         id="flowPara6710">RDF Databases</flowPara></flowRoot>    <flowRoot
+       transform="translate(315.14285,490.85715)"
+       xml:space="preserve"
+       id="flowRoot6712"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion6714"><rect
+           id="rect6716"
+           width="294.28571"
+           height="228.57141"
+           x="58.57143"
+           y="66.647896"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6718">OWL Databases</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6720"
+       width="608.57141"
+       height="74.285713"
+       x="68.85714"
+       y="331.79077"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6722"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-51.142857,-439.14286)"><flowRegion
+         id="flowRegion6724"><rect
+           id="rect6726"
+           width="692.85712"
+           height="77.142868"
+           x="148.57143"
+           y="783.79077" /></flowRegion><flowPara
+         id="flowPara6728"
+         style="font-size:32px">Small management RDF database</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6730"
+       width="254.28572"
+       height="74.285713"
+       x="84.285713"
+       y="505.2193"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6732"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-2.8571424,-384.78068)"><flowRegion
+         id="flowRegion6734"><rect
+           id="rect6736"
+           width="231.42857"
+           height="64.285713"
+           x="95.714287"
+           y="900"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara6738">OWLAPI</flowPara></flowRoot>    <rect
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect6740"
+       width="607.14288"
+       height="311.42859"
+       x="72.857147"
+       y="881.42859"
+       transform="translate(0,-447.63782)"
+       ry="25.253813" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6742"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,-447.63782)"><flowRegion
+         id="flowRegion6744"><rect
+           id="rect6746"
+           width="554.28571"
+           height="54.285686"
+           x="105.71429"
+           y="890" /></flowRegion><flowPara
+         id="flowPara6748">Databases by schema sets</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 338.57143,667.14286 0,68.57143"
+       id="path6750"
+       inkscape:connector-curvature="0"
+       transform="translate(0,-447.63782)" />
+  </g>
+</svg>
